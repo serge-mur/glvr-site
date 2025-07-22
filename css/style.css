@@ -1,0 +1,56 @@
+:root {
+    --primary: #3F3F46;
+}
+
+html,
+body {
+    scrollbar-gutter: stable;
+}
+body {
+    font-family: 'Graphik LCG', sans-serif;
+    background-color: #fff;
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.sprite24 {
+    width: 24px;
+    height: 24px;
+}
+
+/* container */
+/* 2560 */
+.container {
+    width: calc(2480px + 40px * 2);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+/* 1920 */
+@media (max-width: 1919px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+/* 768 */
+@media (max-width: 991px) {
+    .true-container {
+        padding: 0 20px;
+    }
+}
+/* 375 */
+@media (max-width: 575px) {
+    .true-container {
+        padding: 0 20px;
+    }
+}
+.container_full-with {
+    padding: 0 0;
+}
+
+.remove-scrolling { 
+    overflow: hidden; 
+    height: 100vh;
+}
