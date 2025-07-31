@@ -10,81 +10,90 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main class="main">      
 
-        <header class="header" style="display: none;">
-            <div class="container container_full-with">
-                <div class="header-desktop">
-                    <nav class="header__top-menu top-menu">
-                        <button href="#" class="top-menu__item top-menu__item_catalog">
-                            <span class="icon">
-                                <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.1875 13.9867H20.8142M20.8142 8.01334H1.1875" stroke="white" stroke-width="1.33333"/>
-                                </svg>
-                                <!-- <svg class="sprite"><use xlink:href="img/sprites.svg#burger_white"></use></svg> -->
-                            </span>
-                            <span>Каталог</span>
-                        </button>
-                        <a href="#" class="top-menu__item">Lookbook</a>
-                        <a href="#" class="top-menu__item">Коллекции</a>
-                    </nav>
-                    <a href="/" class="header__logo">
-                        <!-- <svg class="sprite"><use xlink:href="img/sprites.svg#logo_white"></use></svg> -->
-                        <svg viewBox="0 0 230 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_2557_5703)">
-                                <path d="M47.8892 22.4894C47.8892 27.3985 47.3383 31.3991 46.2367 34.5019C44.5535 39.2068 41.7787 42.8401 37.9125 45.3712C34.1891 47.8001 29.7718 49.0249 24.6713 49.0249C16.3675 49.0249 10.0019 46.1978 5.56436 40.5539C2.20816 36.2674 0.535156 31.1543 0.535156 25.2143C0.535156 18.6315 2.50399 13.0999 6.42126 8.6194C10.8792 3.51651 17.1019 0.975159 25.0895 0.975159C30.4247 0.975159 34.9439 2.34277 38.6572 5.06772C41.2992 7.01709 43.564 9.87478 45.4409 13.6613L34.3114 18.213C33.3627 16.1413 32.2508 14.5899 30.996 13.549C29.1904 12.0895 27.0277 11.3547 24.5285 11.3547C19.4278 11.3547 15.8676 13.9776 13.8682 19.2235C13.1133 21.1524 12.7358 23.1527 12.7358 25.2041C12.7358 29.4906 14.0926 33.0525 16.8163 35.9205C18.8259 38.0433 21.5191 39.1047 24.8753 39.1047C27.8642 39.1047 30.231 38.2373 31.9753 36.5022C33.1281 35.3591 33.883 33.6751 34.24 31.4297H24.5386V22.4689H47.8791L47.8892 22.4894ZM100.681 48.9637H73.3924V1.17927H85.7765V38.6454H100.67V48.9637H100.681ZM168.785 1.17927L148.433 48.9637H138.792L118.727 1.17927H132.223L143.719 30.2254L155.318 1.17927H168.785ZM229.563 48.9637H214.169L202.356 30.6949V48.9637H189.971V1.17927H209.262C214.904 1.17927 219.076 2.87344 221.78 6.26191C223.962 8.99707 225.065 12.2119 225.065 15.8964C225.065 20.1318 223.81 23.51 221.29 26.0309C219.678 27.6434 217.454 28.766 214.638 29.3988L229.573 48.9535L229.563 48.9637ZM212.036 16.9373C212.036 15.3247 211.446 13.9572 210.272 12.855C209.171 11.8139 207.386 11.2934 204.936 11.2934H202.743V22.6323H204.936C207.416 22.6323 209.201 22.1118 210.272 21.0707C211.446 19.9378 212.036 18.5601 212.036 16.9373Z" fill="white"/>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_2557_5703">
-                                    <rect width="229.6" height="48.829" fill="white" transform="translate(0.199219 0.58551)"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </a>
-                    <div class="header__top-control top-control">
-                        <button class="top-control__search">
-                            <span class="icon">
-                                <svg class="sprite"><use xlink:href="img/sprites.svg#search_white"></use></svg>
-                            </span>
-                            <span>найти</span>
-                        </button>
-                        <button class="top-control__personal">
-                            <span class="icon">
-                                <svg class="sprite"><use xlink:href="img/sprites.svg#user_white"></use></svg>
-                            </span>
-                            <span>войти</span>
-                        </button>
-                        <button class="top-control__favorite">
-                            <svg class="sprite"><use xlink:href="img/sprites.svg#hearth_white"></use></svg>
-                        </button>
-                        <button class="top-control__cart">
-                            <svg class="sprite"><use xlink:href="img/sprites.svg#cart_white"></use></svg>
-                        </button>
-                    </div>
+    <header class="header" style="display: none;">
+        <div class="container container_full-with">
+            <div class="header-desktop">
+                <nav class="header__top-menu top-menu">
+                    <button href="#" class="top-menu__item top-menu__item_catalog">
+                        <span class="icon">
+                            <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.1875 13.9867H20.8142M20.8142 8.01334H1.1875" stroke="white" stroke-width="1.33333"/>
+                            </svg>
+                            <!-- <svg class="sprite"><use xlink:href="img/sprites.svg#burger_white"></use></svg> -->
+                        </span>
+                        <span>Каталог</span>
+                    </button>
+                    <a href="#" class="top-menu__item">Lookbook</a>
+                    <a href="#" class="top-menu__item">Коллекции</a>
+                </nav>
+                <a href="/" class="header__logo">
+                    <!-- <svg class="sprite"><use xlink:href="img/sprites.svg#logo_white"></use></svg> -->
+                    <svg viewBox="0 0 230 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2557_5703)">
+                            <path d="M47.8892 22.4894C47.8892 27.3985 47.3383 31.3991 46.2367 34.5019C44.5535 39.2068 41.7787 42.8401 37.9125 45.3712C34.1891 47.8001 29.7718 49.0249 24.6713 49.0249C16.3675 49.0249 10.0019 46.1978 5.56436 40.5539C2.20816 36.2674 0.535156 31.1543 0.535156 25.2143C0.535156 18.6315 2.50399 13.0999 6.42126 8.6194C10.8792 3.51651 17.1019 0.975159 25.0895 0.975159C30.4247 0.975159 34.9439 2.34277 38.6572 5.06772C41.2992 7.01709 43.564 9.87478 45.4409 13.6613L34.3114 18.213C33.3627 16.1413 32.2508 14.5899 30.996 13.549C29.1904 12.0895 27.0277 11.3547 24.5285 11.3547C19.4278 11.3547 15.8676 13.9776 13.8682 19.2235C13.1133 21.1524 12.7358 23.1527 12.7358 25.2041C12.7358 29.4906 14.0926 33.0525 16.8163 35.9205C18.8259 38.0433 21.5191 39.1047 24.8753 39.1047C27.8642 39.1047 30.231 38.2373 31.9753 36.5022C33.1281 35.3591 33.883 33.6751 34.24 31.4297H24.5386V22.4689H47.8791L47.8892 22.4894ZM100.681 48.9637H73.3924V1.17927H85.7765V38.6454H100.67V48.9637H100.681ZM168.785 1.17927L148.433 48.9637H138.792L118.727 1.17927H132.223L143.719 30.2254L155.318 1.17927H168.785ZM229.563 48.9637H214.169L202.356 30.6949V48.9637H189.971V1.17927H209.262C214.904 1.17927 219.076 2.87344 221.78 6.26191C223.962 8.99707 225.065 12.2119 225.065 15.8964C225.065 20.1318 223.81 23.51 221.29 26.0309C219.678 27.6434 217.454 28.766 214.638 29.3988L229.573 48.9535L229.563 48.9637ZM212.036 16.9373C212.036 15.3247 211.446 13.9572 210.272 12.855C209.171 11.8139 207.386 11.2934 204.936 11.2934H202.743V22.6323H204.936C207.416 22.6323 209.201 22.1118 210.272 21.0707C211.446 19.9378 212.036 18.5601 212.036 16.9373Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2557_5703">
+                                <rect width="229.6" height="48.829" fill="white" transform="translate(0.199219 0.58551)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <div class="header__top-control top-control">
+                    <button class="top-control__search">
+                        <span class="icon">
+                            <svg class="sprite"><use xlink:href="img/sprites.svg#search_white"></use></svg>
+                        </span>
+                        <span>найти</span>
+                    </button>
+                    <button class="top-control__personal">
+                        <span class="icon">
+                            <svg class="sprite"><use xlink:href="img/sprites.svg#user_white"></use></svg>
+                        </span>
+                        <span>войти</span>
+                    </button>
+                    <button class="top-control__favorite">
+                        <svg class="sprite"><use xlink:href="img/sprites.svg#hearth_white"></use></svg>
+                    </button>
+                    <button class="top-control__cart">
+                        <svg class="sprite"><use xlink:href="img/sprites.svg#cart_white"></use></svg>
+                    </button>
                 </div>
             </div>
-        </header>
-        
+        </div>
+    </header>
+
+    <main class="main">      
+
         <section class="section top">
             <div class="container container_full-with">
                 <div class="top__slider swiper top-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <picture>
+                    <div class="swiper-wrapper top-slider__wrapper">
+                        <div class="swiper-slide top-slider__slide">
+                            <picture class="top-slider__picture">
                                 <source media="(min-width: 576px)" srcset="img/slide_01.jpg">
-                                <img src="img/dummy_575x787_ffffff_cccccc.png" alt="">
+                                <img src="img/slide_01_mob.jpg" alt="">
                             </picture>
+                            <div class="top-slider__caption">
+                                <div class="top-slider__title">Весна – лето 2025</div>
+                                <a href="#" class="top-slider__link">Смотреть коллекцию</a>                                
+                            </div>
                         </div>
-                        <div class="swiper-slide">
-                            <picture>
+                        <div class="swiper-slide top-slider__slide">
+                            <picture class="top-slider__picture">
                                 <source media="(min-width: 576px)" srcset="img/slide_01.jpg">
-                                <img src="img/dummy_575x787_ffffff_cccccc.png" alt="">
+                                <img src="img/slide_01_mob.jpg" alt="">
                             </picture>
+                            <div class="top-slider__caption">
+                                <div class="top-slider__title">Весна – лето 2025</div>
+                                <a href="#" class="top-slider__link">Смотреть коллекцию</a>                                
+                            </div>
                         </div>
-
                     </div>
-                    <div class="swiper-button-prev top__prev"></div>
-                    <div class="swiper-button-next top__next"></div>               
+                    <div class="swiper-pagination top-slider__pagination"></div>
+                    <div class="swiper-button-prev top-slider__prev"></div>
+                    <div class="swiper-button-next top-slider__next"></div>               
                 </div> 
             </div>
         </section>
@@ -97,15 +106,26 @@
                 </div>
                 <div class="category__slider swiper category-slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img class="" src="img/cat_slide_01.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="" src="img/cat_slide_01.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="" src="img/cat_slide_01.jpg" alt="">
-                        </div>
+                        <a href="#" class="swiper-slide category-slider__slide">
+                            <div class="category-slider__caption">Верхняя одежда</div>
+                            <img class="category-slider__image" src="img/cat_slide_01.jpg" alt="">
+                        </a>
+                        <a href="#" class="swiper-slide category-slider__slide">
+                            <div class="category-slider__caption">Жакеты</div>
+                            <img class="category-slider__image" src="img/cat_slide_01.jpg" alt="">
+                        </a>
+                        <a href="#" class="swiper-slide category-slider__slide">
+                            <div class="category-slider__caption">Брюки, шорты</div>
+                            <img class="category-slider__image" src="img/cat_slide_01.jpg" alt="">
+                        </a>
+                        <a href="#" class="swiper-slide category-slider__slide">
+                            <div class="category-slider__caption">Платья, сарафаны</div>
+                            <img class="category-slider__image" src="img/cat_slide_01.jpg" alt="">
+                        </a>
+                        <a href="#" class="swiper-slide category-slider__slide">
+                            <div class="category-slider__caption">Верхняя одежда</div>
+                            <img class="category-slider__image" src="img/cat_slide_01.jpg" alt="">
+                        </a>
                     </div>
                     <div class="swiper-button-prev category-slider__prev"></div>
                     <div class="swiper-button-next category-slider__next"></div>
@@ -116,12 +136,65 @@
         <section class="section banner">
             <div class="container container_full-with">
                 <a class="banner__link" href="#">
-                    <picture>
+                    <picture class="banner__picture">
                         <source media="(min-width: 576px)" srcset="img/banner_full.jpg">
-                        <img src="img/dummy_575x787_ffffff_cccccc.png" alt="">
+                        <img src="img/banner_full_mob.jpg" alt="">
                     </picture>
                 </a>
             </div>              
+        </section>
+
+        <section class="section goods">
+            <div class="container">
+                <div class="section__header">
+                    <div class="section__title">Категории</div>
+                    <a href="#" class="section__link">Смотреть все</a>
+                </div>
+                <div class="goods__slider swiper goods-slider">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="swiper-slide goods-slider__slide">
+                            <div class="goods-slider__badge">new</div>
+                            <img class="goods-slider__image" src="img/good_slide_01.png" alt="">
+                        </a>
+                        <a href="#" class="swiper-slide goods-slider__slide">
+                            <div class="goods-slider__badge">new</div>
+                            <img class="goods-slider__image" src="img/good_slide_02.png" alt="">
+                        </a>
+                        <a href="#" class="swiper-slide goods-slider__slide">
+                            <div class="goods-slider__badge">new</div>
+                            <img class="goods-slider__image" src="img/good_slide_01.png" alt="">
+                        </a>
+                        <a href="#" class="swiper-slide goods-slider__slide">
+                            <div class="goods-slider__badge">new</div>
+                            <img class="goods-slider__image" src="img/good_slide_02.png" alt="">
+                        </a>
+                        <a href="#" class="swiper-slide goods-slider__slide">
+                            <div class="goods-slider__badge">new</div>
+                            <img class="goods-slider__image" src="img/good_slide_01.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-button-prev goods-slider__prev"></div>
+                    <div class="swiper-button-next goods-slider__next"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section trends">
+            <div class="container">
+                <div class="trends__wrapper">
+                    <div class="trends__caption">
+                        <div class="trends__name">Трендовая капсула</div>
+                        <div class="trends__title">Смелые и стильные решения на каждый день</div>
+                        <a href="#" class="trends__link">в каталог</a>
+                    </div>
+                    <div class="trends__image">
+                        <img src="img/trends_1.jpg" alt="">
+                    </div>
+                    <div class="trends__image">
+                        <img src="img/trends_2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="section category2">
@@ -149,9 +222,176 @@
             </div>              
         </section>
 
+        <section class="section banner">
+            <div class="container container_full-with">
+                <a class="banner__link" href="#">
+                    <picture class="banner__picture">
+                        <source media="(min-width: 576px)" srcset="img/banner_full.jpg">
+                        <img src="img/banner_full_mob.jpg" alt="">
+                    </picture>
+                </a>
+            </div>              
+        </section>
 
-               
+        <section class="section blog">
+            <div class="container">
+                <div class="section__header">
+                    <div class="section__title">Читайте Gulliver Magazine</div>
+                </div>
+                <div class="category__slider swiper blog-slider">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="swiper-slide blog-slider__slide">
+                            <img class="blog-slider__image" src="img/blog_slide_01.png" alt="">
+                            <div class="blog-slider__caption">
+                                <div class="blog-slider__title">Как подобрать платье под свой тип фигуры</div>   
+                                <div class="blog-slider__link">читать</div> 
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-slide blog-slider__slide">
+                            <img class="blog-slider__image" src="img/blog_slide_02.png" alt="">
+                            <div class="blog-slider__caption">
+                                <div class="blog-slider__title">От первого лица: интервью с главным дизайнером GLVR – Анастасией Кириченко</div>   
+                                <div class="blog-slider__link">читать</div> 
+                            </div>
+                        </a>
+                        <a href="#" class="swiper-slide blog-slider__slide">
+                            <img class="blog-slider__image" src="img/blog_slide_01.png" alt="">
+                            <div class="blog-slider__caption">
+                                <div class="blog-slider__title">Как подобрать платье под свой тип фигуры</div>   
+                                <div class="blog-slider__link">читать</div> 
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-button-prev blog-slider__prev"></div>
+                    <div class="swiper-button-next blog-slider__next"></div>
+                </div>   
+            </div>              
+        </section>
+
+
+        
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+
+                <div class="footer__subscribe subscribe">
+                    <div class="subscribe__title">Подписка на рассылку</div>
+                    <div class="subscribe__subtitle">Присоединяйтесь и получите 500 бонусных рублей на покупки в GLVR</div>
+                    <form class="subscribe__form" action="">
+                        <input type="email" name="email" class="subscribe__input" autocomplete="off" placeholder="Ваш email">
+                        <button type="submit" class="subscribe__button">
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                    <path d="M8.00065 1.62451L14.6673 8.29117M14.6673 8.29117L8.00065 14.9578M14.6673 8.29117H1.33398" stroke="#3F3F46" stroke-width="1.2"/>
+                                </g>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="subscribe__checkbox">
+                        <input class="subscribe__checkbox-input" type="checkbox" id="pd" name="pd" />
+                        <label class="subscribe__checkbox-label" for="pd">Даю согласие на <a href="#" target="_blank">обработку персональных данных</a></label>
+                    </div>
+                </div>
+
+                <div class="footer__social social">
+                    <a href="#" class="social__link">
+                        <img src="img/social_icon_vk.svg" class="social__image" alt="">
+                    </a>
+                    <a href="#" class="social__link">
+                        <img src="img/social_icon_tg.svg" class="social__image" alt="">
+                    </a>
+                    <a href="#" class="social__link">
+                        <img src="img/social_icon_dzen.svg" class="social__image" alt="">
+                    </a>
+                    <a href="#" class="social__link">
+                        <img src="img/social_icon_pinterest.svg" class="social__image" alt="">
+                    </a>
+                </div>
+
+                <div class="footer__menu footer-menu">
+                    <div class="footer-menu__block">
+                        <div class="footer-menu__title">Магазин</div>
+                        <nav class="footer-menu__nav">
+                            <a href="#" class="footer-menu__link">Каталог</a>
+                            <a href="#" class="footer-menu__link">Капсулы</a>
+                            <a href="#" class="footer-menu__link">Акции</a>
+                            <a href="#" class="footer-menu__link">Lookbook</a>
+                            <a href="#" class="footer-menu__link">Коллекции</a>
+                        </nav>
+                    </div>
+                    <div class="footer-menu__block">
+                        <div class="footer-menu__title">Покупателям</div>
+                        <nav class="footer-menu__nav">
+                            <a href="#" class="footer-menu__link">Доставка и оплата</a>
+                            <a href="#" class="footer-menu__link">Возврат</a>
+                            <a href="#" class="footer-menu__link">Частые вопросы</a>
+                            <a href="#" class="footer-menu__link">Подарочные сертификаты</a>
+                            <a href="#" class="footer-menu__link">Магазины</a>
+                            <a href="#" class="footer-menu__link">Рассрочка</a>
+                            <a href="#" class="footer-menu__link">Gulliver Family</a>
+                            <a href="#" class="footer-menu__link">Рекомендации по уходу</a>
+                            <a href="#" class="footer-menu__link">Документы</a>
+                        </nav>
+                    </div>
+                    <div class="footer-menu__block">
+                        <div class="footer-menu__title">О компании</div>
+                        <nav class="footer-menu__nav">
+                            <a href="#" class="footer-menu__link">О бренде</a>
+                            <a href="#" class="footer-menu__link">Ценности</a>
+                            <a href="#" class="footer-menu__link">История</a>
+                            <a href="#" class="footer-menu__link">Контакты</a>
+                            <a href="#" class="footer-menu__link">Франшиза GLVR</a>
+                            <a href="#" class="footer-menu__link">Бренды</a>
+                            <a href="#" class="footer-menu__link">Новости</a>
+                            <a href="#" class="footer-menu__link">Реквизиты</a>
+                            <a href="#" class="footer-menu__link">Сотрудничество</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="footer__logo footer-logo">
+                    <img class="footer-logo__image" src="img/footer_logo.svg" alt="logo">
+                </div>
+
+                <div class="footer__apps apps">
+                    <div class="apps__wrapper">
+                        <a href="#" class="apps__link">
+                            <img src="img/googleplay_logo.svg" class="apps__image" alt="">
+                        </a>
+                        <a href="#" class="apps__link">
+                            <img src="img/appstore_logo.svg" class="apps__image" alt="">
+                        </a>
+                    </div>
+                    <div class="apps__title">Скидка 1000 ₽ на первый заказ от 5000 ₽</div>
+                </div>
+
+                <div class="footer__payment-logo payment-logo">
+                    <img src="img/pay-halva_logo.svg" class="payment-logo__image" alt="" >
+                    <img src="img/pay-split.svg" class="payment-logo__image" alt="" >
+                    <img src="img/pay-mastercard.svg" class="payment-logo__image" alt="" >
+                    <img src="img/pay-visa.svg" class="payment-logo__image" alt="" >
+                    <img src="img/pay-mir.svg" class="payment-logo__image" alt="" >
+                </div>
+
+                <div class="footer__copyright copyright">
+                    <div class="copyright__wrapper">
+                        <div class="copyright__text">© Gulliver, 2025</div>
+                        <a href="#" class="copyright__link">Карта сайта</a>
+                        <a href="#" class="copyright__link">Документы</a>
+                    </div>
+                    <div class="copyright__message">На информационном ресурсе применяются рекомендательные технологии</div>
+                </div>
+
+                <div class="footer__contacts contacts">
+                    <div class="contacts__address">Москва, Медовый переулок, 5/1</div>
+                    <a href="mailto:help@gulliver.ru" class="contacts__email">help@gulliver.ru</a>
+                    <a href="tel:+74951204515" class="contacts__phone">8 (495) 120-45-15</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
