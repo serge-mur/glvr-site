@@ -2,6 +2,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log('DOMContentLoaded');
 
+
+    const menu = new MmenuLight(
+        document.querySelector('.mob-menu'),
+        "(max-width: 1200px)"
+    );
+
+    const navigator = menu.navigation();
+    const drawer = menu.offcanvas();
+
+    const mobMenuToggle = document.querySelector('.mob-menu-toggle');
+    const panel = document.querySelector('.mm-ocd');
+    console.log(panel);
+
+    mobMenuToggle.addEventListener( "click", ( evnt ) => {
+        evnt.preventDefault();
+        mobMenuToggle.classList.toggle('mob-menu-toggle--open');
+        if (panel.classList.contains('mm-ocd--open')) {
+            drawer.close();
+        } else {
+            drawer.open();            
+        }       
+    });
+
+
     const topSlider = new Swiper('.top-slider', {
         navigation: {
           nextEl: '.top-slider__next',
