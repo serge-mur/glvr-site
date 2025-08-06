@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GLVR main</title>
+    <title>GLVR catalog</title>
     <link rel="stylesheet" href="css/minireset.min.css">
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="lib/mmenu-light/mmenu-light.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/catalog.css">
 </head>
 <body>
 
@@ -118,219 +118,71 @@
         </div>
     </header>
 
-    <main class="main">      
+    <main class="catalog">      
+        <div class="container">
 
-        <section class="section top">
-            <div class="container container_full-with">
-                <div class="top__slider swiper top-slider">
-                    <div class="swiper-wrapper top-slider__wrapper">
-                        <div class="swiper-slide top-slider__slide">
-                            <picture class="top-slider__picture">
-                                <source media="(min-width: 576px)" srcset="img/slide_01.jpg">
-                                <img src="img/slide_01_mob.jpg" alt="">
-                            </picture>
-                            <div class="top-slider__caption">
-                                <div class="top-slider__title">Весна – лето 2025</div>
-                                <a href="#" class="top-slider__link">Смотреть коллекцию</a>                                
-                            </div>
-                        </div>
-                        <div class="swiper-slide top-slider__slide">
-                            <picture class="top-slider__picture">
-                                <source media="(min-width: 576px)" srcset="img/slide_01.jpg">
-                                <img src="img/slide_01_mob.jpg" alt="">
-                            </picture>
-                            <div class="top-slider__caption">
-                                <div class="top-slider__title">Весна – лето 2025</div>
-                                <a href="#" class="top-slider__link">Смотреть коллекцию</a>                                
-                            </div>
-                        </div>
-                        <div class="swiper-slide top-slider__slide">
-                            <picture class="top-slider__picture">
-                                <source media="(min-width: 576px)" srcset="img/slide_01.jpg">
-                                <img src="img/slide_01_mob.jpg" alt="">
-                            </picture>
-                            <div class="top-slider__caption">
-                                <div class="top-slider__title">Весна – лето 2025</div>
-                                <a href="#" class="top-slider__link">Смотреть коллекцию</a>                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination top-slider__pagination"></div>
-                    <div class="swiper-button-prev top-slider__prev"></div>
-                    <div class="swiper-button-next top-slider__next"></div>               
-                </div> 
+            <div class="catalog__title">Одежда <span class="catalog__title-count">248</span></div>
+
+            <div class="catalog__category category">
+                <a href="#" class="category__item">Верхняя одежда</a>
+                <a href="#" class="category__item">Брюки, шорты</a>
+                <a href="#" class="category__item">Платья, сарафаны</a>
+                <a href="#" class="category__item">Джемперы, свитеры, кардиганы</a>
             </div>
-        </section>
 
-        <section class="section category">
-            <div class="container">
-                <div class="section__header">
-                    <div class="section__title">Категории</div>
-                    <a href="#" class="section__link">Смотреть все</a>
-                </div>
-                <div class="category__slider swiper category-slider">
-                    <div class="swiper-wrapper">
-                        <a href="#" class="swiper-slide category-slider__slide">
-                            <div class="category-slider__caption">Верхняя одежда</div>
-                            <img class="category-slider__image" src="img/cat_slide_01.jpg" alt="">
-                        </a>
-                        <a href="#" class="swiper-slide category-slider__slide">
-                            <div class="category-slider__caption">Жакеты</div>
-                            <img class="category-slider__image" src="img/cat_slide_01.jpg" alt="">
-                        </a>
-                        <a href="#" class="swiper-slide category-slider__slide">
-                            <div class="category-slider__caption">Брюки, шорты</div>
-                            <img class="category-slider__image" src="img/cat_slide_01.jpg" alt="">
-                        </a>
-                        <a href="#" class="swiper-slide category-slider__slide">
-                            <div class="category-slider__caption">Платья, сарафаны</div>
-                            <img class="category-slider__image" src="img/cat_slide_01.jpg" alt="">
-                        </a>
-                        <a href="#" class="swiper-slide category-slider__slide">
-                            <div class="category-slider__caption">Верхняя одежда</div>
-                            <img class="category-slider__image" src="img/cat_slide_01.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="swiper-button-prev category-slider__prev"></div>
-                    <div class="swiper-button-next category-slider__next"></div>
-                </div>   
-            </div>              
-        </section>
-
-        <section class="section banner">
-            <div class="container container_full-with">
-                <a class="banner__link" href="#">
-                    <picture class="banner__picture">
-                        <source media="(min-width: 576px)" srcset="img/banner_full.jpg">
-                        <img src="img/banner_full_mob.jpg" alt="">
-                    </picture>
-                </a>
-            </div>              
-        </section>
-
-        <section class="section goods">
-            <div class="container">
-                <div class="section__header">
-                    <div class="section__title">Категории</div>
-                    <a href="#" class="section__link">Смотреть все</a>
-                </div>
-                <div class="goods__slider swiper goods-slider">
-                    <div class="swiper-wrapper">
-                        <a href="#" class="swiper-slide goods-slider__slide">
-                            <div class="goods-slider__badge">new</div>
-                            <img class="goods-slider__image" src="img/good_slide_01.png" alt="">
-                        </a>
-                        <a href="#" class="swiper-slide goods-slider__slide">
-                            <div class="goods-slider__badge">new</div>
-                            <img class="goods-slider__image" src="img/good_slide_02.png" alt="">
-                        </a>
-                        <a href="#" class="swiper-slide goods-slider__slide">
-                            <div class="goods-slider__badge">new</div>
-                            <img class="goods-slider__image" src="img/good_slide_01.png" alt="">
-                        </a>
-                        <a href="#" class="swiper-slide goods-slider__slide">
-                            <div class="goods-slider__badge">new</div>
-                            <img class="goods-slider__image" src="img/good_slide_02.png" alt="">
-                        </a>
-                        <a href="#" class="swiper-slide goods-slider__slide">
-                            <div class="goods-slider__badge">new</div>
-                            <img class="goods-slider__image" src="img/good_slide_01.png" alt="">
-                        </a>
-                    </div>
-                    <div class="swiper-button-prev goods-slider__prev"></div>
-                    <div class="swiper-button-next goods-slider__next"></div>
-                </div>
+            <div class="catalog__control">
+                <button class="filter">фильтр</button>
+                <button class="sorting">сортировка</button>
             </div>
-        </section>
 
-        <section class="section trends">
-            <div class="container">
-                <div class="trends__wrapper">
-                    <div class="trends__caption">
-                        <div class="trends__name">Трендовая капсула</div>
-                        <div class="trends__title">Смелые и стильные решения на каждый день</div>
-                        <a href="#" class="trends__link">в каталог</a>
+            <div class="catalog__grid">
+
+                <div class="catalog__card card">
+                    <div class="card__badge">предзаказ</div>
+                    <a href="#" class="card_slider">
+                        <img src="img/card_photo_1.png" alt="">
+                    </a>
+                    <a href="#" class="card__title">Пальто тонкое стеганое без воротника бежевое GLVR</a>
+                    <div class="card__size-list">
+                        <a href="#" class="card__size-item">xs</a>
+                        <a href="#" class="card__size-item">s</a>
+                        <a href="#" class="card__size-item">m</a>
+                        <a href="#" class="card__size-item">l</a>
+                        <a href="#" class="card__size-item">xl</a>
                     </div>
-                    <div class="trends__image">
-                        <img src="img/trends_1.jpg" alt="">
+                    <div class="card__price">
+                        <div class="card__price-actual">12 499 ₽</div>
+                        <div class="card__price-old">24 999 ₽</div>
                     </div>
-                    <div class="trends__image">
-                        <img src="img/trends_2.jpg" alt="">
-                    </div>
+                    <div class="card__split">split</div>
                 </div>
+
+                <div class="catalog__card card">2</div>
+                <div class="catalog__card card">3</div>
+                <div class="catalog__card card">4</div>
+
+                <div class="catalog__card card">5 big</div>
+
+                <div class="catalog__card card">6</div>
+                <div class="catalog__card card">7</div>
+                <div class="catalog__card card">8</div>
+                <div class="catalog__card card">9</div>
+                <div class="catalog__card card">10</div>
+                <div class="catalog__card card">11</div>
+                <div class="catalog__card card">12</div>
+                <div class="catalog__card card">13</div>
+
+                <div class="catalog__card card">14 big</div>
+
+                <div class="catalog__card card">15</div>
+                <div class="catalog__card card">16</div>
+                <div class="catalog__card card">17</div>
+                <div class="catalog__card card">18</div>
+
             </div>
-        </section>
 
-        <section class="section category2">
-            <div class="container">
-                <div class="category2__wrapper">
-                    <div class="category2__card">
-                        <a href="#" class="category2__image">
-                            <img src="img/cat_01.jpg" alt="">                            
-                        </a>
-                        <div class="category2__content">
-                            <h3 class="category2__title">Сумки</h3>
-                            <a href="#" class="category2__link">показать еще</a>                            
-                        </div>
-                    </div>
-                    <div class="category2__card">
-                        <a href="#" class="category2__image">
-                            <img src="img/cat_02.jpg" alt="">                            
-                        </a>
-                        <div class="category2__content">
-                            <h3 class="category2__title">Обувь</h3>
-                            <a href="#" class="category2__link">показать еще</a>                            
-                        </div>
-                    </div>                    
-                </div>
-            </div>              
-        </section>
 
-        <section class="section banner">
-            <div class="container container_full-with">
-                <a class="banner__link" href="#">
-                    <picture class="banner__picture">
-                        <source media="(min-width: 576px)" srcset="img/banner_full.jpg">
-                        <img src="img/banner_full_mob.jpg" alt="">
-                    </picture>
-                </a>
-            </div>              
-        </section>
-
-        <section class="section blog">
-            <div class="container">
-                <div class="section__header">
-                    <div class="section__title">Читайте Gulliver Magazine</div>
-                </div>
-                <div class="category__slider swiper blog-slider">
-                    <div class="swiper-wrapper">
-                        <a href="#" class="swiper-slide blog-slider__slide">
-                            <img class="blog-slider__image" src="img/blog_slide_01.png" alt="">
-                            <div class="blog-slider__caption">
-                                <div class="blog-slider__title">Как подобрать платье под свой тип фигуры</div>   
-                                <div class="blog-slider__link">читать</div> 
-                            </div>
-                        </a>
-                        <a href="#" class="swiper-slide blog-slider__slide">
-                            <img class="blog-slider__image" src="img/blog_slide_02.png" alt="">
-                            <div class="blog-slider__caption">
-                                <div class="blog-slider__title">От первого лица: интервью с главным дизайнером GLVR – Анастасией Кириченко</div>   
-                                <div class="blog-slider__link">читать</div> 
-                            </div>
-                        </a>
-                        <a href="#" class="swiper-slide blog-slider__slide">
-                            <img class="blog-slider__image" src="img/blog_slide_01.png" alt="">
-                            <div class="blog-slider__caption">
-                                <div class="blog-slider__title">Как подобрать платье под свой тип фигуры</div>   
-                                <div class="blog-slider__link">читать</div> 
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-button-prev blog-slider__prev"></div>
-                    <div class="swiper-button-next blog-slider__next"></div>
-                </div>   
-            </div>              
-        </section>
+        </div>
         
     </main>
 
