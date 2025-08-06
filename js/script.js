@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log('DOMContentLoaded');
 
     const menu = new MmenuLight(
-        document.querySelector('.mob-menu'),
-        "(max-width: 1200px)"
+        document.querySelector('.mob-menu')
     );
     const navigator = menu.navigation({title: 'Меню'});
     const drawer = menu.offcanvas();
