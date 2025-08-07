@@ -49,8 +49,94 @@
 /* #endregion category */
 
 /* #region control */
-.catalog__control {
-    margin-bottom: 10px;
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;    
+}
+.control__left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.control__filter {
+    background-color: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 30px;
+    padding: 0 16px;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+.control__reset {
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 17px;
+    padding: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--lines);
+    display: none;
+}
+.sorting {
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    border: 1px solid var(--lines);
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;    
+}
+.sorting__icon {
+    
+}
+.sorting__name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    display: none;
+}
+.sorting__name::after {
+    display: inline-flex;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3337 5.33325L7.97949 10.6874L2.66699 5.33325" stroke="%233F3F46"/></svg>') no-repeat center center;
+}
+@media (min-width: 1200px) {
+    .control__reset {
+        display: flex;
+    }
+    .sorting {
+        width: unset;
+        padding: 0 16px; 
+    }
+    .sorting__icon {
+        display: none;
+    }
+    .sorting__name {
+        display: flex;
+    }
 }
 /* #endregion control */
 
@@ -60,6 +146,8 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 5px;
     row-gap: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
 }
 .catalog__card:nth-child(5),
 .catalog__card:nth-child(14) {
@@ -75,6 +163,12 @@
     } 
 }
 @media (min-width: 1200px) {
+    .catalog__grid {
+        column-gap: 20px;
+        row-gap: 40px;
+        margin-left: 0;
+        margin-right: 0;
+    }
     .catalog__card:nth-child(5) {
         grid-column: 3 / span 2;
         grid-row: 1 / span 2;  
@@ -83,12 +177,185 @@
         grid-column: 1 / span 2;
         grid-row: 5 / span 2;  
     } 
-
 }
 /* #endregion grid */
 
 /* #region card */
 .card {
-    
+    position: relative;
+}
+.card__badge {
+    color: var(--primary);
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+.card__badge_sale {
+    color: var(--sale);
+}
+.card__favorite {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.card__favorite_active .card__favorite-icon {
+    fill: var(--primary);
+}
+.card__slider {
+    display: none;
+}
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 15px;
+}
+.card__title {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 132%;
+    text-decoration: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 48px;
+}
+.card__size-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.card__size-item {
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 132%;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.card__price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card__price-actual {
+    color: var(--sale);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 132%;
+}
+.card__price-actual_no-old {
+    color: var(--primary);
+}
+.card__price-old {
+    color: var(--secondary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 132%;
+    text-decoration: line-through;
+}
+.card__split {
+}
+@media (min-width: 1200px) {
+    .card__image {
+        display: none;
+    }
+    .card__slider {
+        display: block;
+    }
 }
 /* #endregion card */
+
+/* #region card-image */
+.card-image {
+
+}
+.card-image__image {
+    position: relative;
+}
+.card-image__toggle {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 44px;
+    height: 44px;
+    border-radius: 2px;
+    background: url('data:image/svg+xml,<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18.3933V9.39331M9 9.39331V0.393311M9 9.39331L0 9.39331M9 9.39331H18" stroke="white" stroke-linejoin="round"/></svg>') no-repeat center center var(--primary);
+}
+.card-image__toggle_open {
+    background: url('data:image/svg+xml,<svg width="18" height="2" viewBox="0 0 18 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 1.39331L9 1.39331H18" stroke="white" stroke-linejoin="round"/></svg>') no-repeat center center var(--primary);
+}
+.card-image__list {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.image-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.image-item__image {
+    width: 88px;
+    flex-shrink: 0;
+}
+.image-item__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.image-item__title {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 132%;
+    text-decoration: none;
+}
+.image-item__size-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.image-item__size-item {
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 132%;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.image-item__price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.image-item__price-actual {
+    color: var(--sale);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 132%;
+}
+.image-item__price-actual_no-old {
+    color: var(--primary);
+}
+.image-item__price-old {
+    color: var(--secondary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 132%;
+    text-decoration: line-through;
+}
+.image-item__split {
+}
+.image-item__link {
+    margin-left: auto;
+}
+/* #endregion card-image */

@@ -130,38 +130,141 @@
                 <a href="#" class="category__item">Джемперы, свитеры, кардиганы</a>
             </div>
 
-            <div class="catalog__control">
-                <button class="filter">фильтр</button>
-                <button class="sorting">сортировка</button>
+            <div class="catalog__control control">
+                <div class="control__left">
+                    <button class="control__filter">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.666748 4.66675L15.3334 4.66675M3.33341 8.00008L12.6667 8.00008M6.00008 11.3334L10.0001 11.3334" stroke="white" stroke-linejoin="round"/>
+                        </svg>
+                        <span>фильтр</span>
+                    </button>
+                    <button class="control__reset">
+                        <span>сбросить</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.33325 3.33325L7.99992 7.99992M7.99992 7.99992L12.6666 12.6666M7.99992 7.99992L12.6666 3.33325M7.99992 7.99992L3.33325 12.6666" stroke="#3F3F46" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <button class="control__sorting sorting">
+                    <svg class="sorting__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.00549 3V12.0001M4.00549 12.0001L7.00749 9.00001M4.00549 12.0001L1.00537 9.00001M11.9978 13V3.99988M11.9978 3.99988L8.99577 6.99999M11.9978 3.99988L14.9979 6.99999" stroke="#3F3F46" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="sorting__name">Рекомендуем</div>
+                </button>
             </div>
 
             <div class="catalog__grid">
 
                 <div class="catalog__card card">
-                    <div class="card__badge">предзаказ</div>
-                    <a href="#" class="card_slider">
-                        <img src="img/card_photo_1.png" alt="">
+                    <div class="card__badge card__badge_sale">sale</div>
+                    <button class="card__favorite">
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.6473 3.06865C17.024 4.46 17.024 6.71581 15.6473 8.10715L8.99987 14.8252L2.35237 8.10715C0.975641 6.71581 0.975641 4.46 2.35237 3.06865C3.72911 1.67731 5.96123 1.67731 7.33796 3.06865L8.99983 4.74815L10.6617 3.06865C12.0384 1.67731 14.2705 1.67731 15.6473 3.06865Z" stroke="#3F3F46"/>
+                        </svg>
+                    </button>
+                    <a href="#" class="card__media">
+                        <div class="card__image">
+                            <img src="img/card_photo_1.png" alt="">
+                        </div>
+                        <div class="card__slider swiper card-slider">
+                            <div class="swiper-wrapper card-slider__wrapper">
+                                <div class="swiper-slide card-slider__slide">
+                                    <img src="img/card_photo_1.png" alt="">
+                                </div>
+                                <div class="swiper-slide card-slider__slide">
+                                    <img src="img/card_photo_1.png" alt="">
+                                </div>
+                                <div class="swiper-slide card-slider__slide">
+                                    <img src="img/card_photo_1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination card-slider__pagination"></div>
+                            <div class="swiper-button-prev card-slider__prev"></div>
+                            <div class="swiper-button-next card-slider__next"></div>
+                        </div>
                     </a>
-                    <a href="#" class="card__title">Пальто тонкое стеганое без воротника бежевое GLVR</a>
-                    <div class="card__size-list">
-                        <a href="#" class="card__size-item">xs</a>
-                        <a href="#" class="card__size-item">s</a>
-                        <a href="#" class="card__size-item">m</a>
-                        <a href="#" class="card__size-item">l</a>
-                        <a href="#" class="card__size-item">xl</a>
+                    <div class="card__content">
+                        <a href="#" class="card__title">Пальто тонкое стеганое без воротника бежевое GLVR</a>
+                        <div class="card__size-list">
+                            <a href="#" class="card__size-item">xs</a>
+                            <a href="#" class="card__size-item">s</a>
+                            <a href="#" class="card__size-item">m</a>
+                            <a href="#" class="card__size-item">l</a>
+                            <a href="#" class="card__size-item">xl</a>
+                        </div>
+                        <div class="card__price">
+                            <div class="card__price-actual card__price-actual_no-old">12 499 ₽</div>
+                            <div class="card__price-old">24 999 ₽</div>
+                        </div>
+                        <div class="card__split"><img src="img/split.svg" alt=""></div>                        
                     </div>
-                    <div class="card__price">
-                        <div class="card__price-actual">12 499 ₽</div>
-                        <div class="card__price-old">24 999 ₽</div>
-                    </div>
-                    <div class="card__split">split</div>
                 </div>
+ 
 
                 <div class="catalog__card card">2</div>
                 <div class="catalog__card card">3</div>
                 <div class="catalog__card card">4</div>
 
-                <div class="catalog__card card">5 big</div>
+                <div class="catalog__card card-image">
+                    <div class="card-image__image">
+                        <img src="img/card_photo_1.png" alt="">
+                        <button class="card-image__toggle"></button>
+                    </div>
+                    <div class="card-image__list">
+                        <div class="card-image__item image-item">
+                            <a href="#" class="image-item__image">
+                                <img src="img/image-item_photo_1.png" alt="">
+                            </a>
+                            <div class="image-item__content">
+                                <a href="#" class="image-item__title">Пальто тонкое стеганое без воротника бежевое GLVR</a>
+                                <div class="image-item__size-list">
+                                    <a href="#" class="image-item__size-item">xs</a>
+                                    <a href="#" class="image-item__size-item">s</a>
+                                    <a href="#" class="image-item__size-item">m</a>
+                                    <a href="#" class="image-item__size-item">l</a>
+                                    <a href="#" class="image-item__size-item">xl</a>
+                                </div>
+                                <div class="image-item__price">
+                                    <div class="image-item__price-actual">12 499 ₽</div>
+                                    <div class="image-item__price-old">24 999 ₽</div>
+                                </div>
+                                <div class="image-item__split"><img src="img/split.svg" alt=""></div>                        
+                            </div>
+                            <a href="#" class="image-item__link">
+                                <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="0.393311" width="30" height="30" rx="2" fill="white" fill-opacity="0.1"/>
+                                    <path d="M15.0002 8.72668L21.6668 15.3933M21.6668 15.3933L15.0002 22.06M21.6668 15.3933H8.3335" stroke="#3F3F46"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="card-image__item image-item">
+                            <a href="#" class="image-item__image">
+                                <img src="img/image-item_photo_1.png" alt="">
+                            </a>
+                            <div class="image-item__content">
+                                <a href="#" class="image-item__title">Пальто тонкое стеганое без воротника бежевое GLVR</a>
+                                <div class="image-item__size-list">
+                                    <a href="#" class="image-item__size-item">xs</a>
+                                    <a href="#" class="image-item__size-item">s</a>
+                                    <a href="#" class="image-item__size-item">m</a>
+                                    <a href="#" class="image-item__size-item">l</a>
+                                    <a href="#" class="image-item__size-item">xl</a>
+                                </div>
+                                <div class="image-item__price">
+                                    <div class="image-item__price-actual">12 499 ₽</div>
+                                    <div class="image-item__price-old">24 999 ₽</div>
+                                </div>
+                                <div class="image-item__split"><img src="img/split.svg" alt=""></div>                        
+                            </div>
+                            <a href="#" class="image-item__link">
+                                <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="0.393311" width="30" height="30" rx="2" fill="white" fill-opacity="0.1"/>
+                                    <path d="M15.0002 8.72668L21.6668 15.3933M21.6668 15.3933L15.0002 22.06M21.6668 15.3933H8.3335" stroke="#3F3F46"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="catalog__card card">6</div>
                 <div class="catalog__card card">7</div>
@@ -352,5 +455,6 @@
     <script src="lib/swiper/swiper-bundle.min.js"></script>
     <script src="lib/mmenu-light/mmenu-light.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/catalog.js"></script>
 </body>
 </html>
