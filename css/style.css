@@ -6,7 +6,7 @@
     --bg: #F3F3F3;
     --lines: #D4D4D8;
     --sale: #F73E12;
-
+    --disabled: #F4F4F5;
 
 }
 * {
@@ -38,7 +38,10 @@ img, video {
     object-fit: cover;
     vertical-align: middle;
 }
-
+.remove-scrolling { 
+    overflow: hidden; 
+    height: 100vh;
+} 
 /* container */
 .container {
     position: relative;

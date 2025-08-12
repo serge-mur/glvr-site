@@ -145,12 +145,19 @@
                         </svg>
                     </button>
                 </div>
-                <button class="control__sorting sorting">
-                    <svg class="sorting__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.00549 3V12.0001M4.00549 12.0001L7.00749 9.00001M4.00549 12.0001L1.00537 9.00001M11.9978 13V3.99988M11.9978 3.99988L8.99577 6.99999M11.9978 3.99988L14.9979 6.99999" stroke="#3F3F46" stroke-linejoin="round"/>
-                    </svg>
-                    <div class="sorting__name">Рекомендуем</div>
-                </button>
+                <div class="control__sorting sorting">
+                    <button class="sorting__button">
+                        <svg class="sorting__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.00549 3V12.0001M4.00549 12.0001L7.00749 9.00001M4.00549 12.0001L1.00537 9.00001M11.9978 13V3.99988M11.9978 3.99988L8.99577 6.99999M11.9978 3.99988L14.9979 6.99999" stroke="#3F3F46" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="sorting__name">Рекомендуем</div>
+                    </button>
+                    <div class="sorting__content">
+                        <a href="#" class="sorting__item sorting__item_active">Рекомендуем</a>
+                        <a href="#" class="sorting__item">Возрастание цены</a>
+                        <a href="#" class="sorting__item">Убывание цены</a>
+                    </div>
+                </div>
             </div>
 
             <div class="catalog__grid">
@@ -284,6 +291,27 @@
 
             </div>
 
+            <div class="pagination">
+                <ul class="pagination__list">
+                    <li class="pagination__item pagination__item_current">
+                        <span class="pagination__link">1</span>
+                    </li>                       
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="#">2</a>
+                    </li>
+                    <li class="pagination__item pagination__item_disabled">
+                        <span class="pagination__link">
+                            ...
+                        </span>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="#">89</a>
+                    </li>
+                </ul>
+                <button class="pagination__more more">
+                    <span class="more__text">Загрузить еще <span class="more__counter">16</span></span>
+                </button>
+            </div>
 
         </div>
         
@@ -452,6 +480,20 @@
 
     </nav>
     
+    <div class="filter filter_open">
+        <div class="filter__overlay"></div>
+        <div class="filter__wrapper">
+            <div class="filter__header">
+                <div class="filter__title">Фильтр</div>
+                <button class="filter__close"></button>
+            </div>
+            <div class="filter__content">
+                content
+            </div>
+        </div>        
+    </div>
+
+
     <script src="lib/swiper/swiper-bundle.min.js"></script>
     <script src="lib/mmenu-light/mmenu-light.js"></script>
     <script src="js/script.js"></script>
