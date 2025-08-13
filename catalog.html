@@ -94,7 +94,7 @@
                     <img src="img/header_logo.svg" alt="">
                 </a>
 
-                <button class="header__personal  header-element">
+                <button class="header__personal header-element">
                     <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.90039 21.4V18.2C4.90039 16.8745 5.97491 15.8 7.30039 15.8H17.7004C19.0259 15.8 20.1004 16.8745 20.1004 18.2V21.4M16.9004 9.80003C16.9004 12.2301 14.9304 14.2 12.5004 14.2C10.0703 14.2 8.10039 12.2301 8.10039 9.80003C8.10039 7.36997 10.0703 5.40002 12.5004 5.40002C14.9304 5.40002 16.9004 7.36997 16.9004 9.80003Z" stroke="#3F3F46" stroke-miterlimit="10"/>
                     </svg>
@@ -120,6 +120,20 @@
 
     <main class="catalog">      
         <div class="container">
+
+            <div class="breadcrumb">
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                        <a href="#" class="breadcrumb__link">Главная</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <a href="#" class="breadcrumb__link">Каталог</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <span class="breadcrumb__link breadcrumb__link_active">Одежда</span>
+                    </li>
+                </ul>
+            </div>
 
             <div class="catalog__title">Одежда <span class="catalog__title-count">248</span></div>
 
@@ -282,7 +296,66 @@
                 <div class="catalog__card card">12</div>
                 <div class="catalog__card card">13</div>
 
-                <div class="catalog__card card">14 big</div>
+                <div class="catalog__card card-image">
+                    <div class="card-image__image">
+                        <img src="img/card_photo_1.png" alt="">
+                        <button class="card-image__toggle"></button>
+                    </div>
+                    <div class="card-image__list">
+                        <div class="card-image__item image-item">
+                            <a href="#" class="image-item__image">
+                                <img src="img/image-item_photo_1.png" alt="">
+                            </a>
+                            <div class="image-item__content">
+                                <a href="#" class="image-item__title">Пальто тонкое стеганое без воротника бежевое GLVR</a>
+                                <div class="image-item__size-list">
+                                    <a href="#" class="image-item__size-item">xs</a>
+                                    <a href="#" class="image-item__size-item">s</a>
+                                    <a href="#" class="image-item__size-item">m</a>
+                                    <a href="#" class="image-item__size-item">l</a>
+                                    <a href="#" class="image-item__size-item">xl</a>
+                                </div>
+                                <div class="image-item__price">
+                                    <div class="image-item__price-actual">12 499 ₽</div>
+                                    <div class="image-item__price-old">24 999 ₽</div>
+                                </div>
+                                <div class="image-item__split"><img src="img/split.svg" alt=""></div>                        
+                            </div>
+                            <a href="#" class="image-item__link">
+                                <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="0.393311" width="30" height="30" rx="2" fill="white" fill-opacity="0.1"/>
+                                    <path d="M15.0002 8.72668L21.6668 15.3933M21.6668 15.3933L15.0002 22.06M21.6668 15.3933H8.3335" stroke="#3F3F46"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="card-image__item image-item">
+                            <a href="#" class="image-item__image">
+                                <img src="img/image-item_photo_1.png" alt="">
+                            </a>
+                            <div class="image-item__content">
+                                <a href="#" class="image-item__title">Пальто тонкое стеганое без воротника бежевое GLVR</a>
+                                <div class="image-item__size-list">
+                                    <a href="#" class="image-item__size-item">xs</a>
+                                    <a href="#" class="image-item__size-item">s</a>
+                                    <a href="#" class="image-item__size-item">m</a>
+                                    <a href="#" class="image-item__size-item">l</a>
+                                    <a href="#" class="image-item__size-item">xl</a>
+                                </div>
+                                <div class="image-item__price">
+                                    <div class="image-item__price-actual">12 499 ₽</div>
+                                    <div class="image-item__price-old">24 999 ₽</div>
+                                </div>
+                                <div class="image-item__split"><img src="img/split.svg" alt=""></div>                        
+                            </div>
+                            <a href="#" class="image-item__link">
+                                <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="0.393311" width="30" height="30" rx="2" fill="white" fill-opacity="0.1"/>
+                                    <path d="M15.0002 8.72668L21.6668 15.3933M21.6668 15.3933L15.0002 22.06M21.6668 15.3933H8.3335" stroke="#3F3F46"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="catalog__card card">15</div>
                 <div class="catalog__card card">16</div>
@@ -438,6 +511,98 @@
         </div>
     </footer>
 
+    <div class="filter">
+        <div class="filter__overlay"></div>
+        <div class="filter__wrapper">
+            <div class="filter__header">
+                <div class="filter__title">Фильтр</div>
+                <button class="filter__close"></button>
+            </div>
+            <div class="filter__content">
+
+                <div class="filter__category filter-category">
+                    <div class="filter-category__item">
+                        <input type="checkbox" id="category_1" class="filter-category__input" name="category" value="category_1">
+                        <label for="category_1" class="filter-category__label">Вся верхняя одежда</label>                                
+                    </div>
+                    <div class="filter-category__item">
+                        <input type="checkbox" id="category_2" class="filter-category__input" name="category" value="category_2">
+                        <label for="category_2" class="filter-category__label">Пальто</label>                                
+                    </div>
+                    <div class="filter-category__item">
+                        <input type="checkbox" id="category_3" class="filter-category__input" name="category" value="category_3">
+                        <label for="category_3" class="filter-category__label">Куртки</label>                                
+                    </div>
+                </div>
+
+                <div class="filter__section filter-section">
+                    <div class="filter-section__header">
+                        <div class="filter-section__title">
+                            <span class="filter-section__name">Размер</span>
+                            <span class="filter-section__count">2</span>
+                        </div>    
+                        <button class="filter-section__reset">Сбросить</button>
+                        <div class="filter-section__state"></div>
+                    </div>
+                    <div class="filter-section__content">
+                        <div class="filter-section__subtitle">Одежда</div>
+                        <div class="filter-section__list">
+                            <div class="checkbox">
+                                <input type="checkbox" id="f_1" class="checkbox__input" name="" value="">
+                                <label for="f_1" class="checkbox__label">M</label>                                
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="f_2" class="checkbox__input" name="" value="">
+                                <label for="f_2" class="checkbox__label">L</label>                                
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="f_3" class="checkbox__input" name="" value="">
+                                <label for="f_3" class="checkbox__label">XL</label>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter__section filter-section">
+                    <div class="filter-section__header">
+                        <div class="filter-section__title">
+                            <span class="filter-section__name">Коллекция</span>
+                            <span class="filter-section__count">3</span>
+                        </div>    
+                        <button class="filter-section__reset">Сбросить</button>
+                        <div class="filter-section__state"></div>
+                    </div>
+                    <div class="filter-section__content">
+                        <div class="filter-section__list">
+                            <div class="checkbox">
+                                <input type="checkbox" id="f_11" class="checkbox__input" name="" value="">
+                                <label for="f_11" class="checkbox__label">Весна/Лето 2025</label>                                
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="f_22" class="checkbox__input" name="" value="">
+                                <label for="f_22" class="checkbox__label">Outlet Весна/Лето</label>                                
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="f_33" class="checkbox__input" name="" value="">
+                                <label for="f_33" class="checkbox__label">Осень/Зима 2024-2025</label>                                
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="f_44" class="checkbox__input" name="" value="">
+                                <label for="f_44" class="checkbox__label">Outlet Осень/Зима</label>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter__action">
+                    <button class="filter__apply"><span class="filter__count">23</span> товара</button>
+                    <button class="filter__reset">Сбросить все</button>
+                </div>
+
+            </div>
+        </div>        
+    </div>    
+    
     <nav class="mob-menu">
         <ul>
             <li><a href="#">Новинки <img src="img/dot_green.svg" alt=""></a>
@@ -479,20 +644,6 @@
         </ul>
 
     </nav>
-    
-    <div class="filter filter_open">
-        <div class="filter__overlay"></div>
-        <div class="filter__wrapper">
-            <div class="filter__header">
-                <div class="filter__title">Фильтр</div>
-                <button class="filter__close"></button>
-            </div>
-            <div class="filter__content">
-                content
-            </div>
-        </div>        
-    </div>
-
 
     <script src="lib/swiper/swiper-bundle.min.js"></script>
     <script src="lib/mmenu-light/mmenu-light.js"></script>

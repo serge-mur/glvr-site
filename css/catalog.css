@@ -1,8 +1,11 @@
 @import 'style.css';
 
 /* #region top */
+.header {
+    background-color: #fff!important;
+}
 .catalog {
-    padding-top: 46px;
+    padding: calc(46px + 16px) 0 30px 0;
 }
 .catalog__title {
     color: var(--primary);
@@ -19,7 +22,64 @@
     line-height: 136%;
     vertical-align: super;
 }
+@media (min-width: 1200px) {
+    .catalog {
+        padding: calc(62px + 20px) 0 80px 0;
+    }
+    .catalog__title {
+        font-size: 32px;
+    }
+}
+@media (min-width: 1920px) {
+    .catalog {
+        padding: calc(72px + 20px) 0 80px 0;
+    }
+    .catalog__title {
+        font-size: 44px;
+    }
+}
 /* #endregion top */
+
+/* #region breadcrumb */
+.breadcrumb {
+    display: none;
+}
+.breadcrumb__list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.breadcrumb__item {
+    display: flex;
+    align-items: center;
+}
+.breadcrumb__item::after {
+    display: block;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6" r="2.25" fill="%23D4D4D8"/></svg>') no-repeat center center;
+    margin-left: 12px;
+}
+.breadcrumb__item:last-child::after {
+    display: none;
+}
+.breadcrumb__link {
+    color: var(--secondary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 132%;
+    letter-spacing: 0%;
+    text-decoration: none;
+}
+.breadcrumb__link_active {
+}
+@media (min-width: 1200px) {
+    .breadcrumb {
+        display: block;
+    }
+}
+/* #endregion breadcrumb */
 
 /* #region category */
 .category {
@@ -51,6 +111,9 @@
 /* #region control */
 /* fix adaptive & overlay mob sorting & fixed control */
 .control {
+    position: sticky;
+    top: calc(46px + 5px);
+    z-index: 9;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,6 +158,7 @@
     position: relative;
 }
 .sorting__button {
+    background-color: #fff;
     color: var(--primary);
     display: flex;
     align-items: center;
@@ -143,10 +207,12 @@
     flex-direction: column;
     gap: 15px;
     z-index: 1;
+    visibility: hidden;
     opacity: 0;
     transition: opacity .25s ease-out;
 }
 .sorting__content.sorting__content_open {
+    visibility: visible;
     opacity: 1;
 }
 .sorting__item {
@@ -167,6 +233,11 @@
     background-color: var(--disabled);
 }
 @media (min-width: 1200px) {
+    .control {
+        padding: 10px 0;
+        background-color: #fff;
+        top: 62px;
+    }
     .control__reset {
         display: flex;
     }
@@ -186,6 +257,13 @@
         right: 0;
         transform: none;
         z-index: 1;
+    }
+}
+@media (min-width: 1920px) {
+    .control {
+        padding: 10px 0;
+        background-color: #fff;
+        top: 72px;
     }
 }
 /* #endregion control */
@@ -251,7 +329,6 @@
     background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_2593_113783)"><path d="M0.640015 0.639893L15.36 15.3598M15.36 0.639893L0.640015 15.3598" stroke="%233F3F46"/></g><defs><clipPath id="clip0_2593_113783"><rect width="16" height="16" fill="white"/></clipPath></defs></svg>') no-repeat center center;
 }
 .filter__content {
-    padding: 0 15px;
 
 }
 @media (min-width: 576px) {
@@ -282,12 +359,185 @@
         background: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_2593_112839)"><path d="M0.959961 0.959961L23.04 23.0399M23.04 0.959961L0.959961 23.0399" stroke="%233F3F46"/></g><defs><clipPath id="clip0_2593_112839"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>') no-repeat center center;
     }
     .filter__content {
-        padding: 0 30px;
     
     }  
 }
 
 /* #endregion filter */
+
+/* #region filter-content */
+.filter-category {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+}
+.filter-category__item {
+}
+.filter-category__input {
+    display: none;
+}
+.filter-category__label {
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--lines);
+    border-radius: 2px;
+    padding: 0 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 136%;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.25s;    
+}
+.filter-category__input:checked ~ .filter-category__label {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.filter__section {
+    padding: 0 15px;
+}
+.filter-section {
+    border-bottom: 1px solid var(--lines);
+}
+.filter-section__header {
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    cursor: pointer;
+}
+.filter-section__title {
+    margin-right: auto;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.filter-section__name {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 146%;
+}
+.filter-section__count {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--lines);
+    border-radius: 50%;
+    color: var(--text_003);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 100%;
+}
+.filter-section__reset {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 132%;
+    text-decoration-line: underline;
+    text-decoration-color: var(--lines);
+    text-underline-offset: 4px;
+}
+.filter-section__state {
+    width: 16px;
+    height: 16px;
+    background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3333 10.6666L7.99998 5.33325L2.66663 10.6666" stroke="%233F3F46" stroke-linejoin="round"/></svg>') no-repeat center center;
+    transform: rotate(180deg);
+}
+.filter-section__header.filter-section__header_open .filter-section__state {
+    transform: rotate(0);
+}
+.filter-section__content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease, padding 0.5s ease;
+}
+.filter-section__content.filter-section__content_open  {
+    max-height: 500px;
+    padding: 10px 0 15px 0;
+}
+.filter-section__subtitle {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 136%;
+    margin-bottom: 12px;
+}
+.filter-section__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.checkbox {
+
+}
+.checkbox__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.checkbox__label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 132%;
+    position: relative;
+    cursor: pointer;
+}
+.checkbox__label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--lines);
+    transition: .25s background-color, border-color ease-in-out;
+}
+.checkbox__input:checked + .checkbox__label::before {
+    border-color: var(--primary);
+    background: url('data:image/svg+xml,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4.12L4.9 8.8L11.4 1" stroke="white"/></svg>') no-repeat center center var(--primary);
+}
+
+.filter__action {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px 15px;
+}
+.filter__apply,
+.filter__reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 100%;
+    display: flex;
+}
+.filter__apply {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: #fff;    
+}
+.filter__count {
+    margin-right: 5px;
+}
+.filter__reset {
+    background-color: #fff;
+    border: 1px solid var(--lines);
+    color: var(--primary);    
+}
+/* #endregion filter-content */
 
 /* #region grid */
 .catalog__grid {

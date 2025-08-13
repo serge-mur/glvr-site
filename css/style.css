@@ -7,6 +7,7 @@
     --lines: #D4D4D8;
     --sale: #F73E12;
     --disabled: #F4F4F5;
+    --text_003: #6A6A6A;
 
 }
 * {
@@ -209,7 +210,7 @@ img, video {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9;
+    z-index: 999;
     background-color: #fff;
 }
 .header__wrapper {
@@ -325,6 +326,11 @@ img, video {
     }
     .header__cart {
         order: 6;
+    }
+}
+@media (min-width: 1920px) {
+    .header__wrapper {
+        grid-template-rows: 72px;
     }
 }
 /* #endregion header */

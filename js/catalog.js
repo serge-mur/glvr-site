@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    console.log('DOMContentLoaded');
-
-    /* offcanvas info window */
+    /* offcanvas filter */
     const filter = document.querySelector('.filter');
     const filterToggle = document.querySelector('.control__filter');
     const filterClose = document.querySelector('.filter__close');
@@ -24,9 +22,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     toggleFilter();
 
+    // collapse filter section
+    document.querySelectorAll('.filter-section__header').forEach(el => {
+        el.addEventListener('click', function(e) {
+            if (e.target.className == 'filter-section__reset') {
+                // reset section checkboxes
+                let checkboxes = e.target.closest('.filter-section').querySelectorAll('.checkbox__input');
+                checkboxes.forEach(function(checkbox) {
+                    checkbox.checked = false;
+                });
+            } else {
+                e.target.classList.toggle('filter-section__header_open');
+                e.target.closest('.filter-section').querySelector('.filter-section__content').classList.toggle('filter-section__content_open');                
+            };
+        }); 
+    });
 
+    // sorting
     document.querySelector('.sorting__button').addEventListener('click', function(el) {
-        el.currentTarget.classList.toggle('sorting__button_open');
+        el.target.classList.toggle('sorting__button_open');
         el.target.closest('.sorting').querySelector('.sorting__content').classList.toggle('sorting__content_open');
     });    
 
@@ -43,10 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // fix to all
-    document.querySelector('.card-image__toggle').addEventListener('click', function(el) {
-        el.target.classList.toggle('card-image__toggle_open');
-        el.target.closest('.card-image').querySelector('.card-image__list').classList.toggle('card-image__list_open');
+    // card image action
+    document.querySelectorAll('.card-image__toggle').forEach(el => {
+        el.addEventListener('click', () => {
+            el.classList.toggle('card-image__toggle_open');
+            el.closest('.card-image').querySelector('.card-image__list').classList.toggle('card-image__list_open');
+        });        
     });
+
+
 
 });
