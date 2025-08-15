@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log('DOMContentLoaded');
 
+    // mob menu
     const menu = new MmenuLight(
         document.querySelector('.mob-menu')
     );
@@ -17,6 +18,23 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             drawer.open();            
         }       
+    });
+
+    // megamenu
+    const megaMenuToggle = document.querySelector('.header-menu__item_catalog');
+    const overlay = document.querySelector('.overlay');
+    const header = document.querySelector('.header');
+    megaMenuToggle.addEventListener('mouseenter', function() {
+        overlay.classList.add('overlay_open');
+        header.classList.add('header_no-opacity');
+        document.body.classList.add("remove-scrolling");
+        // console.log('show megamenu');
+    });
+    megaMenuToggle.addEventListener('mouseleave', function() {
+        overlay.classList.remove('overlay_open');
+        header.classList.remove('header_no-opacity');
+        document.body.classList.remove("remove-scrolling");
+        // console.log('hide megamenu');
     });
 
 });

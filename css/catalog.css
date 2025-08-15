@@ -106,10 +106,28 @@
     line-height: 136%;
     white-space: nowrap;
 }
+@media (min-width: 1200px) {
+    .category {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        margin-right: 0;
+        margin-bottom: 40px;
+        justify-content: center;
+    }
+    .category__item {
+        height: 44px;
+        font-size: 16px;
+    }
+}
+@media (min-width: 1920px) {
+    .category__item {
+        height: 52px;
+        font-size: 18px;
+    }
+}
 /* #endregion category */
 
 /* #region control */
-/* fix adaptive & overlay mob sorting & fixed control */
 .control {
     position: sticky;
     top: calc(46px + 5px);
@@ -214,6 +232,7 @@
 .sorting__content.sorting__content_open {
     visibility: visible;
     opacity: 1;
+    z-index: 9;
 }
 .sorting__item {
     color: var(--primary);
@@ -267,6 +286,51 @@
     }
 }
 /* #endregion control */
+
+/* #region selected-filters */
+.selected-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--lines);
+    padding: 10px 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.selected-filters__item {
+    background-color: var(--disabled);
+    color: var(--primary);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.11px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0 16px;  
+    cursor: pointer;  
+}
+@media (min-width: 1200px) {
+    .selected-filters {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 0;
+    }  
+    .selected-filters__item {
+        height: 34px;
+        font-size: 14px; 
+    }
+}
+@media (min-width: 1920px) {
+    .selected-filters__item {
+        height: 40px;
+        font-size: 16px; 
+    }
+}
+/* #endregion selected-filters */
 
 /* #region filter */
 .filter__overlay {
@@ -362,7 +426,6 @@
     
     }  
 }
-
 /* #endregion filter */
 
 /* #region filter-content */
@@ -594,6 +657,7 @@
     line-height: 140%;
     letter-spacing: 0.11em;
     text-transform: uppercase;
+    z-index: 2;
 }
 .card__badge_sale {
     color: var(--sale);
@@ -602,6 +666,7 @@
     position: absolute;
     top: 15px;
     right: 15px;
+    z-index: 2;
 }
 .card__favorite_active .card__favorite-icon {
     fill: var(--primary);
@@ -767,6 +832,12 @@
     padding: 15px;
 }
 @media (min-width: 1200px) {
+    .card-image__image {
+        height: 100%;
+    }
+    .card-image__image img {
+        height: 100%;
+    }
     .card-image__list {
         opacity: 0;
         position: absolute;

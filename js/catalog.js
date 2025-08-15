@@ -39,9 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // sorting
-    document.querySelector('.sorting__button').addEventListener('click', function(el) {
-        el.target.classList.toggle('sorting__button_open');
-        el.target.closest('.sorting').querySelector('.sorting__content').classList.toggle('sorting__content_open');
+    const sortingToggle = document.querySelector('.sorting__button');
+    const sortingContent = document.querySelector('.sorting__content');
+    // const overlay = document.querySelector('.overlay');
+    document.querySelector('.sorting__button').addEventListener('click', function() {
+        document.body.classList.toggle("remove-scrolling");
+        sortingToggle.classList.toggle('sorting__button_open');
+        // overlay.classList.toggle('overlay_open');
+        sortingContent.classList.toggle('sorting__content_open');
     });    
 
     document.querySelectorAll('.card-slider').forEach(el => {

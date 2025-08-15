@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    console.log('DOMContentLoaded');
-
     const topSlider = new Swiper('.top-slider', {
         navigation: {
         nextEl: '.top-slider__next',
