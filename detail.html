@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLVR detail</title>
+    <link rel="stylesheet" href="css/minireset.min.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/mmenu-light/mmenu-light.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+
+                <button class="mob-menu-toggle"></button>
+
+                <nav class="header__menu header-menu">
+                    <ul class="header-menu__list">
+                        <li class="header-menu__item header-menu__item_catalog">
+                            <a href="#" class="header-menu__link">
+                                <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.30078 15.8H21.7008M21.7008 10.2H3.30078" stroke="#3F3F46"/>
+                                </svg>
+                                <span>Каталог</span>
+                            </a>
+                            <div class="megamenu">
+                                <div class="megamenu__content">
+                                    <nav class="megamenu__main">
+                
+                                        <ul class="megamenu__menu">
+                                            <li><a href="#">Новинки <img src="img/dot_green.svg" alt=""></a>
+                                            </li>
+                                            <li><a href="#">Одежда</a>
+                                                <ul class="megamenu__submenu">
+                                                    <li><a href="#">Вся одежда</a></li>
+                                                    <li><a href="#">Верхняя одежда</a></li>
+                                                    <li><a href="#">Брюки, шорты</a></li>
+                                                    <li><a href="#">Жакеты</a></li>
+                                                    <li><a href="#">Жилеты</a></li>
+                                                    <li><a href="#">Толстовки, свитшоты</a></li>
+                                                    <li><a href="#">Джинсы</a></li>
+                                                    <li><a href="#">Деним</a></li>
+                                                    <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                    <li><a href="#">Водолазки</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Аксессуары</a>
+                                                <ul class="megamenu__submenu">
+                                                    <li><a href="#">Все аксессуары</a></li>
+                                                    <li><a href="#">Сумки</a></li>
+                                                    <li><a href="#">Упаковка</a></li>
+                                                    <li><a href="#">Украшения</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#" class="megamenu__mark">Sale</a></li>
+                                            <li><a href="#">Магазины</a></li>
+                                        </ul>
+                
+                                    </nav>
+                                    <nav class="megamenu__bottom">
+                                        <a href="#">Акции</a>
+                                        <a href="#">Блог</a>
+                                        <a href="#">Подарочный сертификат</a>
+                                        <a href="#">О бренде</a>
+                                        <a href="#">Программа лояльности</a>
+                                    </nav>
+                                </div>
+                                <a href="#" class="megamenu__photo">
+                                    <div class="megamenu__photo-title">Верхняя одежда</div>
+                                    <img src="img/menu_photo_1.jpg" alt="">
+                                </a>
+                                <a href="#" class="megamenu__photo">
+                                    <div class="megamenu__photo-title">Брюки, шорты</div>
+                                    <img src="img/menu_photo_2.jpg" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        <li class="header-menu__item">
+                            <a href="#" class="header-menu__link">Lookbook</a>
+                        </li>
+                        <li class="header-menu__item">
+                            <a href="#" class="header-menu__link">Коллекции</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <button class="header__search header-element">
+                    <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 23.5L14.2698 15.7698M16.375 10.6875C16.375 14.657 13.157 17.875 9.1875 17.875C5.21795 17.875 2 14.657 2 10.6875C2 6.71795 5.21795 3.5 9.1875 3.5C13.157 3.5 16.375 6.71795 16.375 10.6875Z" stroke="#3F3F46"/>
+                    </svg>
+                    <span>найти</span>
+                </button>
+
+                <a href="/" class="header__logo">
+                    <img src="img/header_logo.svg" alt="">
+                </a>
+
+                <button class="header__personal header-element">
+                    <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 23.5V19.5C3 17.8431 4.34315 16.5 6 16.5H19C20.6569 16.5 22 17.8431 22 19.5V23.5M18 9C18 12.0376 15.5376 14.5 12.5 14.5C9.46243 14.5 7 12.0376 7 9C7 5.96243 9.46243 3.5 12.5 3.5C15.5376 3.5 18 5.96243 18 9Z" stroke="#3F3F46" stroke-miterlimit="10"/>
+                    </svg>
+                    <span>войти</span>
+                </button>
+
+                <button class="header__favorite header-element">
+                    <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.8866 5.29479C25.0378 7.46876 25.0378 10.9935 22.8866 13.1674L12.5001 23.6643L2.11336 13.1674C-0.037786 10.9935 -0.037786 7.46876 2.11336 5.29479C4.2645 3.12081 7.7522 3.12081 9.90334 5.29479L12.5 7.919L15.0967 5.29479C17.2478 3.12081 20.7355 3.12081 22.8866 5.29479Z" stroke="#3F3F46"/>
+                    </svg>
+                    <div class="header-element__count header__favorite-count">9</div>
+                </button>
+
+                <button class="header__cart header-element">
+                    <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5001 2.5V12.0625M2 9.5H23L21 23.5H4L2 9.5Z" stroke="#3F3F46"/>
+                    </svg>
+                    <div class="header-element__count header__cart-count">4</div>
+                </button>
+
+            </div>
+            
+        </div>
+    </header>
+
+    <main class="detail">      
+        <div class="container">
+
+            <section class="product">
+                <div class="product__wrapper">
+
+                    <div class="product__gallery">
+
+                        <a class="product__full-image-link" href="#full-image">Весь образ</a>
+
+                        <div class="product__slider swiper product-slider">
+                            <div class="swiper-wrapper product-slider__wrapper">
+                                <div class="swiper-slide product-slider__slide">
+                                    <img src="img/product_01.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide product-slider__slide">
+                                    <img src="img/product_01.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide product-slider__slide">
+                                    <img src="img/product_01.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination product-slider__pagination"></div>
+                            <div class="swiper-button-prev product-slider__prev"></div>
+                            <div class="swiper-button-next product-slider__next"></div>
+                        </div>
+
+                        <div class="product__thumbs-slider swiper product-thumbs-slider">
+                            <div class="swiper-wrapper product-thumbs-slider__wrapper">
+                                <div class="swiper-slide product-thumbs-slider__slide">
+                                    <img src="img/product_01.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide product-thumbs-slider__slide">
+                                    <img src="img/product_01.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide product-thumbs-slider__slide">
+                                    <img src="img/product_01.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev product-thumbs-slider__prev"></div>
+                            <div class="swiper-button-next product-thumbs-slider__next"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="product__content">
+
+                        <div class="product__breadcrumb breadcrumb">
+                            <ul class="breadcrumb__list">
+                                <li class="breadcrumb__item">
+                                    <a href="#" class="breadcrumb__link">Главная</a>
+                                </li>
+                                <li class="breadcrumb__item">
+                                    <a href="#" class="breadcrumb__link">Каталог</a>
+                                </li>
+                                <li class="breadcrumb__item">
+                                    <span class="breadcrumb__link breadcrumb__link_active">Одежда</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="product__header">
+                            <div class="product__badge-list">
+                                <div class="product__badge-item product__badge-item_sale">Sale</div>
+                            </div>
+                            <button class="product__favorite"></button>
+                        </div>
+
+                        <div class="product__title">Пальто тонкое стеганое без воротника бежевое GLVR</div>
+
+                        <div class="product__articul">Артикул: 12011BJC1207</div>
+
+                        <div class="product__price product-price">
+                            <div class="product-price__actual">4 599 ₽</div>
+                            <div class="product-price__old">8 599 ₽</div>
+                        </div>
+
+                        <div class="product__split"><img src="img/product_split.svg" alt=""></div>
+
+                        <div class="product__size size">
+                            <div class="size__header">
+                                <div class="size__title">Выберите размер:</div>
+                                <a href="#" class="size__table-link">Гид по размерам</a>
+                            </div>
+                            <div class="size__list">
+                                <label class="size__item">
+                                    <input type="radio" name="size" class="size__input">
+                                    <span class="size__value">xs</span>
+                                </label>
+                                <label class="size__item">
+                                    <input type="radio" name="size" class="size__input" disabled>
+                                    <span class="size__value">s</span>
+                                </label>
+                                <label class="size__item">
+                                    <input type="radio" name="size" class="size__input">
+                                    <span class="size__value">m</span>
+                                </label>
+                                <label class="size__item">
+                                    <input type="radio" name="size" class="size__input" checked>
+                                    <span class="size__value">l</span>
+                                </label>
+                                <label class="size__item">
+                                    <input type="radio" name="size" class="size__input">
+                                    <span class="size__value">xl</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="product__buy-wrapper">
+                            <button class="product__buy product__buy_disabled">Добавить в корзину</button>
+                        </div>
+
+                        <div class="product__available">Посмотреть <a href="#">наличие в магазине</a> и <a href="#">зарезервировать</a></div>
+
+                        <div class="product__accordion accordion">
+
+                            <div class="accordion__item accordion__item_open">
+                                <button class="accordion__header">Характеристики</button>
+                                <div class="accordion__content">
+                                    <div class="accordion__inner">
+                                        <div class="product__characteristics characteristics">
+                                            <div class="characteristics__text">
+                                                - Прямая свободная форма<br>
+                                                - Длина мидакси (среднее между миди и макси)<br>
+                                                - Асимметрия в дизайне модели- Состав с преобладанием тенселя (разновидность вискозы)<br>
+                                                - Шелковистая поверхность, пластика, приятный тактильный контакт с кожей                                                
+                                            </div>
+                                            <table class="characteristics__table">
+                                                <tr>
+                                                    <td>Материал</td>
+                                                    <td>Тенсел</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Состав</td>
+                                                    <td>90% тенсел, 10% полиэстер</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Цвет</td>
+                                                    <td>Желтый</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Пол</td>
+                                                    <td>Женский</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Коллекция</td>
+                                                    <td>Осень/Зима 2024-2025</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Размер на модели</td>
+                                                    <td>M</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Параметры модели</td>
+                                                    <td>Рост 177 см, Грудь 85 см, талия 61 см, бёдра 88 см</td>
+                                                </tr>
+                                            </table>
+                                            <div class="characteristics__service service">
+                                                <div class="service__item">
+                                                    <div class="service__icon">
+                                                        <img src="img/care_0001.svg" alt="">
+                                                    </div>
+                                                    <div class="service__text">Стирка запрещена</div>
+                                                </div>
+                                                <div class="service__item">
+                                                    <div class="service__icon">
+                                                        <img src="img/care_0004.svg" alt="">
+                                                    </div>
+                                                    <div class="service__text">Не отбеливать</div>
+                                                </div>
+                                                <div class="service__item">
+                                                    <div class="service__icon">
+                                                        <img src="img/care_0003.svg" alt="">
+                                                    </div>
+                                                    <div class="service__text">Гладить при максимальной температуре подошвы утюга 110°С, без пара. Глажение с паром может вызывать необратимые повреждения</div>
+                                                </div>                                                
+                                                <div class="service__item">
+                                                    <div class="service__icon">
+                                                        <img src="img/care_0002.svg" alt="">
+                                                    </div>
+                                                    <div class="service__text">Профессиональная сухая чистка в тетрахлорэтилене и во всех растворителях, внесенных в список для символа F. Мягкий режим</div>
+                                                </div>
+
+                                                <div class="service__item">
+                                                    <div class="service__icon">
+                                                        <img src="img/care_0005.svg" alt="">
+                                                    </div>
+                                                    <div class="service__text">Не применять барабанную сушку</div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="characteristics__cert">Сертификат</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+
+                            <div class="accordion__item accordion__item_open">
+                                <button class="accordion__header">Доставка</button>
+                                <div class="accordion__content">
+                                    <div class="accordion__inner">
+                                        <div class="product__delivery delivery">
+                                            <div class="delivery__item">
+                                                <div class="delivery__text">Город: <a href="#">г. Москва</a></div>
+                                            </div>
+                                            <div class="delivery__item">
+                                                <div class="delivery__icon delivery__icon_courier"></div>
+                                                <div class="delivery__text">Курьером: от 1 дня — бесплатно</div>
+                                            </div>
+                                            <div class="delivery__item">
+                                                <div class="delivery__icon delivery__icon_pick-up"></div>
+                                                <div class="delivery__text">Из пункта выдачи: от 1 дня — от 300 ₽</div>
+                                            </div>
+                                            <div class="delivery__item">
+                                                <div class="delivery__icon delivery__icon_fitting"></div>
+                                                <div class="delivery__text">Возможна примерка и частичный выкуп</div>
+                                            </div>
+                                            <div class="delivery__item">
+                                                <a href="#" class="delivery__text">Подробнее о доставке и примерке</a>
+                                            </div>
+                                            <div class="delivery__item">
+                                                <div class="delivery__icon delivery__icon_return"></div>
+                                                <div class="delivery__text">Свободный возврат в течении 14 дней после получения заказа</div>
+                                            </div>
+                                            <div class="delivery__item">
+                                                <a href="#" class="delivery__text">Подробнее о возврате</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+
+                            <div class="accordion__item accordion__item_open">
+                                <button class="accordion__header">Описание</button>
+                                <div class="accordion__content">
+                                    <div class="accordion__inner">
+                                        <div class="product__description">
+                                            <p>Модное объемное пальто, с запахом, с рукавами-реглан, выполненное из двусторонней двуслойной пальтовой ткани-бибер, состоящей из высококачественной шерсти мериноса и смесовых волокон, больше чем просто одежда! Это шик и комфорт повседневного городского стиля, иллюстрация вкусовых предпочтений, образа жизни, внутреннего мира.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+
+                            <div class="accordion__item accordion__item_open">
+                                <button class="accordion__header">Подарочная упаковка</button>
+                                <div class="accordion__content">
+                                    <div class="accordion__inner">
+                                        <div class="product__package package">
+                                            <div class="package__text">Ваш заказ может быть упаковкан в подарочную упаковку. Добавь в корзину один из вариантов упаковки:</div>
+                                            <div class="package__list">
+                                                <div class="package__item">
+                                                    <div class="package__image">
+                                                        <img src="img/package_photo.jpg" alt="">
+                                                    </div>
+                                                    <div class="package__content">
+                                                        <div class="package__name">Пальто тонкое стеганое без воротника бежевое GLVR</div>
+                                                        <div class="package__price">12 499 ₽</div>
+                                                        <div class="package__buy">В корзину</div>
+                                                    </div>
+                                                </div>
+                                                <div class="package__item">
+                                                    <div class="package__image">
+                                                        <img src="img/package_photo.jpg" alt="">
+                                                    </div>
+                                                    <div class="package__content">
+                                                        <div class="package__name">Пальто тонкое стеганое без воротника бежевое GLVR</div>
+                                                        <div class="package__price">12 499 ₽</div>
+                                                        <div class="package__buy">В корзину</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+
+                        </div>
+
+                        <div class="product__category category">
+                            <div class="category__list">
+                                <div class="category__item">
+                                    <div class="category__image">
+                                        <img src="img/category_photo.jpg" alt="">
+                                    </div>
+                                    <div class="category__content">
+                                        <a href="#" class="category__link">Вся верхняя одежда</a>
+                                        <div class="category__name">Категория</div>
+                                    </div>
+                                </div>
+                                <div class="category__item">
+                                    <div class="category__image">
+                                        <img src="img/category_photo.jpg" alt="">
+                                    </div>
+                                    <div class="category__content">
+                                        <a href="#" class="category__link">Вся верхняя одежда</a>
+                                        <div class="category__name">Категория</div>
+                                    </div>
+                                </div>
+                                <div class="category__item">
+                                    <div class="category__image">
+                                        <img src="img/category_photo.jpg" alt="">
+                                    </div>
+                                    <div class="category__content">
+                                        <a href="#" class="category__link">Вся верхняя одежда</a>
+                                        <div class="category__name">Категория</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+
+                <div class="footer__subscribe subscribe">
+                    <div class="subscribe__title">Подписка на рассылку</div>
+                    <div class="subscribe__subtitle">Присоединяйтесь и получите 500 бонусных рублей на покупки в GLVR</div>
+                    <form class="subscribe__form" action="">
+                        <input type="email" name="email" class="subscribe__input" autocomplete="off" placeholder="Ваш email">
+                        <button type="submit" class="subscribe__button">
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                    <path d="M8.00065 1.62451L14.6673 8.29117M14.6673 8.29117L8.00065 14.9578M14.6673 8.29117H1.33398" stroke="#3F3F46" stroke-width="1.2"/>
+                                </g>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="subscribe__checkbox">
+                        <input class="subscribe__checkbox-input" type="checkbox" id="pd" name="pd" />
+                        <label class="subscribe__checkbox-label" for="pd">Даю согласие на <a href="#" target="_blank">обработку персональных данных</a></label>
+                    </div>
+                </div>
+
+                <div class="footer__social social">
+                    <a href="#" class="social__link">
+                        <img src="img/social_icon_vk.svg" class="social__image" alt="">
+                    </a>
+                    <a href="#" class="social__link">
+                        <img src="img/social_icon_tg.svg" class="social__image" alt="">
+                    </a>
+                    <a href="#" class="social__link">
+                        <img src="img/social_icon_dzen.svg" class="social__image" alt="">
+                    </a>
+                    <a href="#" class="social__link">
+                        <img src="img/social_icon_pinterest.svg" class="social__image" alt="">
+                    </a>
+                </div>
+
+                <div class="footer__menu footer-menu">
+                    <div class="footer-menu__block">
+                        <div class="footer-menu__title">Магазин</div>
+                        <nav class="footer-menu__nav">
+                            <a href="#" class="footer-menu__link">Каталог</a>
+                            <a href="#" class="footer-menu__link">Капсулы</a>
+                            <a href="#" class="footer-menu__link">Акции</a>
+                            <a href="#" class="footer-menu__link">Lookbook</a>
+                            <a href="#" class="footer-menu__link">Коллекции</a>
+                        </nav>
+                    </div>
+                    <div class="footer-menu__block">
+                        <div class="footer-menu__title">Покупателям</div>
+                        <nav class="footer-menu__nav">
+                            <a href="#" class="footer-menu__link">Доставка и оплата</a>
+                            <a href="#" class="footer-menu__link">Возврат</a>
+                            <a href="#" class="footer-menu__link">Частые вопросы</a>
+                            <a href="#" class="footer-menu__link">Подарочные сертификаты</a>
+                            <a href="#" class="footer-menu__link">Магазины</a>
+                            <a href="#" class="footer-menu__link">Рассрочка</a>
+                            <a href="#" class="footer-menu__link">Gulliver Family</a>
+                            <a href="#" class="footer-menu__link">Рекомендации по уходу</a>
+                            <a href="#" class="footer-menu__link">Документы</a>
+                        </nav>
+                    </div>
+                    <div class="footer-menu__block">
+                        <div class="footer-menu__title">О компании</div>
+                        <nav class="footer-menu__nav">
+                            <a href="#" class="footer-menu__link">О бренде</a>
+                            <a href="#" class="footer-menu__link">Ценности</a>
+                            <a href="#" class="footer-menu__link">История</a>
+                            <a href="#" class="footer-menu__link">Контакты</a>
+                            <a href="#" class="footer-menu__link">Франшиза GLVR</a>
+                            <a href="#" class="footer-menu__link">Бренды</a>
+                            <a href="#" class="footer-menu__link">Новости</a>
+                            <a href="#" class="footer-menu__link">Реквизиты</a>
+                            <a href="#" class="footer-menu__link">Сотрудничество</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="footer__logo footer-logo">
+                    <img class="footer-logo__image" src="img/footer_logo.svg" alt="logo">
+                </div>
+
+                <div class="footer__apps apps">
+                    <div class="apps__wrapper">
+                        <a href="#" class="apps__link">
+                            <img src="img/googleplay_logo.svg" class="apps__image" alt="">
+                        </a>
+                        <a href="#" class="apps__link">
+                            <img src="img/appstore_logo.svg" class="apps__image" alt="">
+                        </a>
+                    </div>
+                    <div class="apps__title">Скидка 1000 ₽ на первый заказ от 5000 ₽</div>
+                </div>
+
+                <div class="footer__payment-logo payment-logo">
+                    <img src="img/pay-halva_logo.svg" class="payment-logo__image" alt="" >
+                    <img src="img/pay-split.svg" class="payment-logo__image" alt="" >
+                    <img src="img/pay-mastercard.svg" class="payment-logo__image" alt="" >
+                    <img src="img/pay-visa.svg" class="payment-logo__image" alt="" >
+                    <img src="img/pay-mir.svg" class="payment-logo__image" alt="" >
+                </div>
+
+                <div class="footer__copyright copyright">
+                    <div class="copyright__wrapper">
+                        <div class="copyright__text">© Gulliver, 2025</div>
+                        <a href="#" class="copyright__link">Карта сайта</a>
+                        <a href="#" class="copyright__link">Документы</a>
+                    </div>
+                    <div class="copyright__message">На информационном ресурсе применяются рекомендательные технологии</div>
+                </div>
+
+                <div class="footer__contacts contacts">
+                    <div class="contacts__address">Москва, Медовый переулок, 5/1</div>
+                    <a href="mailto:help@gulliver.ru" class="contacts__email">help@gulliver.ru</a>
+                    <a href="tel:+74951204515" class="contacts__phone">8 (495) 120-45-15</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <nav class="mob-menu">
+        <ul>
+            <li><a href="#">Новинки <img src="img/dot_green.svg" alt=""></a>
+            </li>
+            <li class=""><span>Одежда</span>
+                <ul>
+                    <li><a href="#">Вся одежда</a></li>
+                    <li><a href="#">Верхняя одежда</a></li>
+                    <li><a href="#">Брюки, шорты</a></li>
+                    <li><a href="#">Жакеты</a></li>
+                    <li><a href="#">Жилеты</a></li>
+                    <li><a href="#">Толстовки, свитшоты</a></li>
+                    <li><a href="#">Джинсы</a></li>
+                    <li><a href="#">Деним</a></li>
+                    <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                    <li><a href="#">Водолазки</a></li>
+                </ul>
+            </li>
+            <li><span>Аксессуары</span>
+                <ul>
+                    <li><a href="#">Все аксессуары</a></li>
+                    <li><a href="#">Сумки</a></li>
+                    <li><a href="#">Упаковка</a></li>
+                    <li><a href="#">Украшения</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="mob-menu__mark">Sale</a></li>
+            <li><a href="#">Магазины</a></li>
+            <li class="mob-menu__submenu">
+                <nav>
+                    <a href="#">Войти</a>
+                    <a href="#">Акции</a>
+                    <a href="#">Блог</a>
+                    <a href="#">Подарочный сертификат</a>
+                    <a href="#">О бренде</a>
+                    <a href="#">Программа лояльности</a>
+                </nav>
+            </li>
+        </ul>
+
+    </nav>
+
+    <div class="overlay"></div>
+
+    <script src="lib/swiper/swiper-bundle.min.js"></script>
+    <script src="lib/mmenu-light/mmenu-light.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/detail.js"></script>
+</body>
+</html>
