@@ -219,7 +219,7 @@
                     <div class="product__size size">
                         <div class="size__header">
                             <div class="size__title">Выберите размер:</div>
-                            <a href="#" class="size__table-link">Гид по размерам</a>
+                            <a href="javascript:void(0)" class="size__table-link offcanvas-link" data-target="size-guide">Гид по размерам</a>
                         </div>
                         <div class="size__list">
                             <label class="size__item">
@@ -701,6 +701,74 @@
         </div>
     </footer>
 
+    <!-- offcanvas -->
+    <div class="offcanvas size-guide" id="size-guide">
+        <div class="offcanvas__overlay"></div>
+        <div class="offcanvas__wrapper">
+            <button class="offcanvas__close"></button>
+            <div class="offcanvas__title">Размерная сетка и обмеры</div>
+            <div class="offcanvas__content">
+                <div class="size-guide__tab">
+                    <div class="size-guide__tab tab">
+                        <input checked id="tab-btn-1" class="tab__input" name="tab-btn" type="radio" value="">
+                        <label for="tab-btn-1" class="tab__label">Таблица размеров</label>
+
+                        <input id="tab-btn-2" class="tab__input" name="tab-btn" type="radio" value="">
+                        <label for="tab-btn-2" class="tab__label">Обмеры изделия</label>
+
+                        <div class="tab__content" id="tab-content-1">
+                            <div class="size-guide__size-table size-table">
+                                <div class="size-table__text">Найдите в таблице параметры, близкие к вашим, чтобы определить свой размер.</div>
+                                <div class="size-table__wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">INT</th>
+                                                <th scope="col">RU</th>
+                                                <th scope="col">Обхват груди</th>
+                                                <th scope="col">Обхват талии</th>
+                                                <th scope="col">Обхват бедра</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>XXS</td>
+                                                <td>40</td>
+                                                <td>80</td>
+                                                <td>60</td>
+                                                <td>88</td>
+                                            </tr>
+                                            <tr>
+                                                <td>XS</td>
+                                                <td>42</td>
+                                                <td>80</td>
+                                                <td>60</td>
+                                                <td>88</td>
+                                            </tr>
+                                            <tr>
+                                                <td>S</td>
+                                                <td>44</td>
+                                                <td>80</td>
+                                                <td>60</td>
+                                                <td>88</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+
+                        <div class="tab__content" id="tab-content-2">
+                            Обмеры изделия
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <!-- end offcanvas -->
     
     <nav class="mob-menu">
         <ul>

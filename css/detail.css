@@ -1121,3 +1121,114 @@
 @media (min-width: 1920px) {
 }
 /* #endregion full image */
+
+/* #region offcanvas */
+.offcanvas__overlay {
+    position: absolute;    
+    top: 0;  
+    left: 0;     
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: opacity .25s ease;    
+    z-index: -1;
+}
+.offcanvas.offcanvas_open .offcanvas__overlay {
+    background: rgba(30, 30, 30, 0.6);
+}
+.offcanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+.offcanvas.offcanvas_open {
+    visibility: visible;
+}
+.offcanvas__wrapper {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    padding: 40px 15px;
+    opacity: 0;
+    background: #fff;
+    transition: 0.25s;
+    z-index: 1;
+}
+.offcanvas.offcanvas_open .offcanvas__wrapper {
+    opacity: 1;
+    transform: translateY(0);
+}
+.offcanvas__close {
+    position: absolute;
+    width: 22px;
+    height: 24px;
+    right: 20px;
+    top: 20px;
+    background: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_3495_19236)"><path d="M0.959961 0.959961L23.04 23.0399M23.04 0.959961L0.959961 23.0399" stroke="%233F3F46"/></g><defs><clipPath id="clip0_3495_19236"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>') no-repeat center center;
+}
+.offcanvas__title {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 118%;
+    letter-spacing: -0.4px;
+    margin-bottom: 15px;
+}
+.offcanvas__content {
+    overflow-y: auto;
+    height: 90%;
+    scrollbar-width: thin;
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 1200px) {
+    .offcanvas__wrapper {
+        position: absolute;
+        left: unset;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 960px;
+        transform: translateX(100%); 
+    }
+    .offcanvas.offcanvas_open .offcanvas__wrapper {
+        transform: translateX(0);
+    }
+}
+/* #endregion offcanvas */
+
+/* #region size guide */
+/* tab */
+.tab__input {
+    display: none;
+}
+.tab__label {
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    height: 36px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    cursor: pointer;
+}
+.tab__input:checked+.tab__label {
+    border-bottom: 2px solid var(--primary);    
+} 
+.tab__content {
+    display: none;
+}
+#tab-btn-1:checked~#tab-content-1,
+#tab-btn-2:checked~#tab-content-2 {
+    display: block;
+}
+
+/* #endregion size guide */
