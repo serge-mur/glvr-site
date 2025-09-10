@@ -69,6 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    const zoomist = new Zoomist(".cat-zoomist", {
+        zoomer: true,
+        smooth: true,
+    });
+
 
 
 

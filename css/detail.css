@@ -1189,13 +1189,24 @@
     margin-bottom: 15px;
 }
 .offcanvas__content {
-    overflow-y: auto;
+    /* overflow-y: auto;
     height: 90%;
-    scrollbar-width: thin;
+    scrollbar-width: thin; */
 }
 .notify-available .offcanvas__wrapper,
 .city-select .offcanvas__wrapper {
     padding: 40px;
+}
+.full-slider .offcanvas__wrapper {
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+    padding: 0;
+}
+.full-slider.offcanvas.offcanvas_open .offcanvas__wrapper {
+    width: 100%;
+    opacity: 1;
+    transform: scale(1);
 }
 @media (min-width: 576px) {
 }
@@ -1502,3 +1513,77 @@
     }    
 }
 /* #endregion city select */
+
+/* #region full slider */
+.full-slider {
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+      --zoomist-slider-bg-color: rgba(12, 12, 12, 0.8);
+      --zoomist-slider-track-color: #444;
+      --zoomist-slider-track-color-hover: #666;
+      --zoomist-slider-button-color: #ccc;
+      --zoomist-zoomer-button-color: rgba(12, 12, 12, 0.9);
+      --zoomist-zoomer-button-color-hover: rgba(24, 24, 24, 0.9);
+      --zoomist-zoomer-button-color-disabled: rgba(12, 12, 12, 0.8);
+      --zoomist-zoomer-icon-color: #ccc;
+      --zoomist-zoomer-icon-color-hover: #eee;
+      --zoomist-zoomer-icon-color-disabled: #666;
+      --body-background-image: linear-gradient(
+        to bottom right,
+        #333,
+        #191919
+      );
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    body {
+      --body-background-image: linear-gradient(to bottom right, #fff, #ccc);
+    }
+  }
+  #app {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--body-background-image);
+  }
+  .cat-zoomist {
+    width: 100%;
+    max-width: 540px;
+    /* max-width: 100%; */
+    max-height: 100dvh;
+    /* aspect-ratio: 2 / 3; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .zoomist-image {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+  }
+  .zoomist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .zoomer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: #efefef;
+  }
+  .zoomer-btn.zoomer-disabled {
+    opacity: 0.2;
+  }
+  .change-image-btn {
+    padding: 0.5rem;
+    background-color: #eee;
+  }
+
+
+/* #endregion full slider */
