@@ -134,6 +134,10 @@
 
                     <a class="product__full-image-link" href="#full-image">Весь образ</a>
 
+                    <div class="product__no-photo" style="display: none;">
+                        <img src="img/no_photo.png" alt="">
+                    </div>
+
                     <div class="product__slider swiper product-slider">
                         <div class="swiper-wrapper product-slider__wrapper">
                             <div class="swiper-slide product-slider__slide">
@@ -243,6 +247,10 @@
                                 <span class="size__value">xl</span>
                             </label>
                         </div>
+                        <!-- del -->
+                        <a href="javascript:void(0)" class="offcanvas-link" data-target="notify-available">Сообщить о поступлении</a>
+                        <a href="javascript:void(0)" class="offcanvas-link" data-target="city-select">Выберите город</a>
+                    
                     </div>
 
                     <div class="product__buy-wrapper">
@@ -720,7 +728,7 @@
                             <div class="size-guide__size-table size-table">
                                 <div class="size-table__text">Найдите в таблице параметры, близкие к вашим, чтобы определить свой размер.</div>
                                 <div class="size-table__wrapper">
-                                    <table>
+                                    <table class="size-table__table">
                                         <thead>
                                             <tr>
                                                 <th scope="col">INT</th>
@@ -755,14 +763,92 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                <div class="size-table__description">
+                                    Все размеры указаны в см<br>Параметры модели: 173/83/64/90
+                                </div>
                             </div>
-                            
+                            <div class="size-guide__contacts size-contacts">
+                                <div class="size-contacts__text">
+                                    Не уверены в правильном выборе размера?<br>Напишите нам или позвоните, и мы вам поможем
+                                </div>
+                                <div class="size-contacts__social">
+                                    <a href="#" class="size-contacts__social-item">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.2819 18.3571C6.44864 18.3571 2.55107 13.5309 2.38867 5.5H5.81153C5.92396 11.3945 8.44739 13.8912 10.4461 14.406V5.5H13.6691V10.5837C15.6429 10.3649 17.7166 8.04826 18.4162 5.5H21.6391C21.3755 6.8216 20.8501 8.07295 20.0956 9.17577C19.3411 10.2786 18.3739 11.2092 17.2544 11.9093C18.504 12.549 19.6077 13.4544 20.4928 14.5659C21.3778 15.6773 22.024 16.9695 22.3887 18.3571H18.8409C18.5135 17.1519 17.8481 16.073 16.9281 15.2557C16.0081 14.4383 14.8744 13.9189 13.6691 13.7625V18.3571H13.2819Z" fill="#3F3F46"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="size-contacts__social-item">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.88266 11.3532C7.47788 9.83563 11.0829 8.34143 14.6974 6.87071C19.8467 4.81112 20.5633 4.5105 21.2594 4.5C21.5585 4.50943 21.8463 4.61643 22.0793 4.80477C22.3707 5.05344 22.4593 5.21094 22.4841 5.34964C22.507 5.48862 22.5048 5.92159 22.48 6.16834C22.201 8.98859 21.1416 15.502 20.528 18.6643C20.2678 20.0008 19.7555 20.4484 19.2598 20.492C18.1838 20.5874 17.3659 19.8082 16.323 19.1492C14.6913 18.1191 14.146 17.74 12.5639 16.7351C10.7317 15.5746 11.4855 15.1704 12.5286 14.1279C12.8013 13.8565 17.3246 9.71417 17.3926 9.33674C17.4505 9.00517 17.4714 8.96179 17.3227 8.81258C17.1718 8.66338 16.9922 8.68189 16.8766 8.70676C16.7113 8.74213 14.2204 10.3231 9.39962 13.4526C8.66019 13.9436 7.99098 14.182 7.3898 14.1696C6.72885 14.155 5.45461 13.809 4.50863 13.5125C3.34565 13.1478 2.42253 12.9572 2.50514 12.3396C2.54645 12.0183 3.00471 11.6889 3.88266 11.3532Z" fill="#3F3F46"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="size-contacts__social-item">
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.6227 15.5557C20.5386 15.4914 20.4516 15.4249 20.3701 15.3594C19.9379 15.012 19.4786 14.6911 19.0344 14.3808C18.9422 14.3165 18.85 14.2521 18.7582 14.1875C18.1892 13.7871 17.6793 13.5901 17.1995 13.5851C16.5533 13.5783 15.9936 13.9273 15.5359 14.6224C15.3332 14.9306 15.0848 15.0788 14.7768 15.0756C14.5946 15.0737 14.3871 15.0198 14.1601 14.9155C12.3281 14.0743 11.0129 12.8004 10.2509 11.129C9.88257 10.3212 9.99372 9.79689 10.6226 9.37581C10.9798 9.13691 11.6445 8.69214 11.588 7.82645C11.524 6.84338 9.31225 3.86421 8.38994 3.51879C7.99944 3.37249 7.59071 3.36687 7.17292 3.50268C6.1204 3.84457 5.36896 4.45651 4.99962 5.27224C4.64271 6.06044 4.66898 6.99062 5.07559 7.96222C6.25106 10.7714 7.88802 13.227 9.94115 15.2608C11.9508 17.2517 14.4123 18.891 17.2573 20.1332C17.5138 20.2451 17.7822 20.3075 17.9782 20.353C18.045 20.3686 18.1026 20.3819 18.1447 20.3937C18.1678 20.4002 18.1916 20.4038 18.2154 20.4043L18.2378 20.4047C19.5699 20.4187 21.1568 19.2254 21.6335 17.8509C22.0512 16.6474 21.2592 16.0421 20.6227 15.5557Z" fill="#3F3F46"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
 
                         </div>
 
                         <div class="tab__content" id="tab-content-2">
                             Обмеры изделия
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="offcanvas notify-available" id="notify-available">
+        <div class="offcanvas__overlay"></div>
+        <div class="offcanvas__wrapper">
+            <button class="offcanvas__close"></button>
+            <div class="offcanvas__title">Сообщить о поступлении</div>
+            <div class="offcanvas__content">
+                <div class="notify-available__product">Пальто тонкое стеганое без воротника бежевое GLVR, размер S</div>
+                <div class="notify-available__text">Мы отправим вам письмо, как только изделие появится у нас в онлайн-магазине.</div>
+                <form class="notify-available__form" action="">
+                    <div class="notify-available__form-group">
+                        <label for="notify_name" class="notify-available__label">Имя</label>   
+                        <input type="text" id="notify_name" class="notify-available__input">                     
+                    </div>
+                    <div class="notify-available__form-group">
+                        <label for="notify_email" class="notify-available__label">E-mail</label>   
+                        <input type="email" id="notify_email" class="notify-available__input">                 
+                    </div>
+                    <button class="notify-available__send">Отправить заявку</button>
+                </form>
+                <button class="notify-available__close" style="display: none;">Хорошо</button>
+                <div class="notify-available__confirmation">
+                    Нажимая «Продолжить», Вы подтверждаете, что ознакомились с <a href="#">Публичной офертой</a>, <a href="#">Политикой об обработке персональных данных</a> и <a href="#">даете согласие на обработку Ваших персональных данных</a>.
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="offcanvas city-select offcanvas_open" id="city-select">
+        <div class="offcanvas__overlay"></div>
+        <div class="offcanvas__wrapper">
+            <button class="offcanvas__close"></button>
+            <div class="offcanvas__title">Выберите город</div>
+            <div class="offcanvas__content">
+                <div class="city-select__selected">Сейчас выбран город: <span>Москва</span></div>
+                <input type="text" id="city_search" class="city-select__search" placeholder="Поиск по названию">
+                <div class="city-select__popular city-popular">
+                    <div class="city-popular__title">Популярные города</div>
+                    <div class="city-popular__list">
+                        <a href="#" class="city-popular__item">Москва</a>
+                        <a href="#" class="city-popular__item">Санкт-Петербург</a>
+                        <a href="#" class="city-popular__item">Новосибирск</a>
+                        <a href="#" class="city-popular__item">Екатеринбург</a>
+                        <a href="#" class="city-popular__item">Нижний Новгород</a>
+                        <a href="#" class="city-popular__item">Казань</a>
+                        <a href="#" class="city-popular__item">Челябинск</a>
+                        <a href="#" class="city-popular__item">Омск</a>
+                        <a href="#" class="city-popular__item">Самара</a>
+                        <a href="#" class="city-popular__item">Красноярск</a>
                     </div>
                 </div>
             </div>
