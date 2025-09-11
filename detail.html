@@ -250,7 +250,7 @@
                         </div>
                         <!-- del -->
                         <a href="javascript:void(0)" class="offcanvas-link" data-target="notify-available">Сообщить о поступлении</a>
-                        <a href="javascript:void(0)" class="offcanvas-link" data-target="full-slider">full-slider</a>
+                        <a href="javascript:void(0)" class="offcanvas-link" data-target="offcanvas-slider">offcanvas-slider</a>
                     
                     </div>
 
@@ -856,44 +856,79 @@
         </div>        
     </div>
 
-    <div class="offcanvas offcanvas_open full-slider" id="full-slider">
+    <div class="offcanvas offcanvas-slider" id="offcanvas-slider">
         <div class="offcanvas__overlay"></div>
         <div class="offcanvas__wrapper">
             <button class="offcanvas__close"></button>
-            <div class="offcanvas__content">
-                <div class="full-slider__wrapper">
 
-                    <div id="app">
-                        <!-- <div class="custom-zoomist-zoomer">
-                            <button class="custom-zoomer-in">+</button>
-                            <button class="custom-zoomer-out">-</button>
-                          </div> -->
-                        <!-- ZOOMIST -->
-                        <div class="cat-zoomist zoomist-container">
-                          <div class="zoomist-wrapper">
-                            <div class="zoomist-image">
-                                <img src="img/test_slider.jpg" alt="">
-                              <!-- <a class="zoomist-not-draggable" href="https://google.com" target="_blank">NOT DRAGGABLE</a>
-                              <a class="zoomist-not-wheelable" href="https://google.com" target="_blank">NOT WHEELABLE</a> -->
+            <div class="offcanvas-slider__wrapper">
+
+                <div class="offcanvas-slider__main swiper offcanvas-slider-main">
+                    <div class="swiper-wrapper offcanvas-slider-main__wrapper">
+                        <div class="swiper-slide offcanvas-slider-main__slide">
+                            <div class="zoomist-container">
+                                <div class="zoomist-wrapper">
+                                    <div class="zoomist-image">
+                                        <img src="img/full_slider_1.webp" alt="">
+                                    </div>
+                                </div>
                             </div>
-                          </div>
                         </div>
-                  
-                        <!-- <button class="change-image-btn">CHANGE</button> -->
-                  
-                        <!-- <div class="zoomist-custom-zoomer">
-                          <button class="in-zoomer zoomer-btn">+</button>
-                          <button class="out-zoomer zoomer-btn">-</button>
-                          <button class="reset-zoomer zoomer-btn">R</button>
-                        </div> -->
-                  
-                        <!-- <div class="zoomist-custom-slider"></div> -->
-                      </div>
-
-
-                    <!-- <img src="img/test_slider.jpg" alt=""> -->
+                        <div class="swiper-slide offcanvas-slider-main__slide">
+                            <div class="zoomist-container">
+                                <div class="zoomist-wrapper">
+                                    <div class="zoomist-image">
+                                        <img src="img/full_slider_1.webp" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide offcanvas-slider-main__slide">
+                            <div class="zoomist-container">
+                                <div class="zoomist-wrapper">
+                                    <div class="zoomist-image">
+                                        <img src="img/full_slider_1.webp" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination offcanvas-slider-main__pagination"></div>
+                    <div class="swiper-button-prev offcanvas-slider-main__prev"></div>
+                    <div class="swiper-button-next offcanvas-slider-main__next"></div>
                 </div>
+
+                <div class="offcanvas-slider__thumbs swiper offcanvas-slider-thumbs">
+                    <div class="swiper-wrapper offcanvas-slider-thumbs__wrapper">
+                        <div class="swiper-slide offcanvas-slider-thumbs__slide">
+                            <img src="img/full_slider_1.webp" alt="">
+                        </div>
+                        <div class="swiper-slide offcanvas-slider-thumbs__slide">
+                            <img src="img/full_slider_1.webp" alt="">
+                        </div>
+                        <div class="swiper-slide offcanvas-slider-thumbs__slide">
+                            <img src="img/full_slider_1.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev offcanvas-slider-thumbs__prev"></div>
+                    <div class="swiper-button-next offcanvas-slider-thumbs__next"></div>
+                </div>  
+
             </div>
+
+            <!-- <div class="offcanvas__content">
+                <div class="full-slider__wrapper">
+                    <div class="slide">
+                        <div class="zoomist-container">
+                            <div class="zoomist-wrapper">
+                                <div class="zoomist-image">
+                                    <img src="img/full_slider_1.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </div>        
     </div>
     <!-- end offcanvas -->

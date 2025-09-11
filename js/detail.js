@@ -69,10 +69,43 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    const zoomist = new Zoomist(".cat-zoomist", {
-        zoomer: true,
-        smooth: true,
+    // offcanvas slider
+    const offcanvasSliderThumbs = new Swiper('.offcanvas-slider-thumbs', {
+        slidesPerView: 9,
+        direction: 'vertical',
+        navigation: {
+            nextEl: '.offcanvas-slider-thumbs__next',
+            prevEl: '.offcanvas-slider-thumbs__prev',
+        },
     });
+    const offcanvasSliderMain = new Swiper('.offcanvas-slider-main', {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.offcanvas-slider-main__next',
+            prevEl: '.offcanvas-slider-main__prev',
+        },
+        pagination: {
+            el: '.offcanvas-slider-main__pagination',
+        },
+        thumbs: {
+            swiper: offcanvasSliderThumbs,
+        }
+    });
+
+    const zoomistContainer = document.querySelectorAll('.zoomist-container');
+    if(zoomistContainer) {
+
+        zoomistContainer.forEach(el => {
+            const zoomist = new Zoomist(el, {
+                zoomer: true,
+                smooth: true,
+                maxScale: 3,
+            });  
+        });
+
+      
+    }
+
 
 
 
