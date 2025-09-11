@@ -141,18 +141,15 @@
 
                     <div class="product__slider swiper product-slider">
                         <div class="swiper-wrapper product-slider__wrapper">
-                            <div class="swiper-slide product-slider__slide">
-                                <img src="img/product_01.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide product-slider__slide">
-                                <img src="img/product_01.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide product-slider__slide">
-                                <img src="img/product_01.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide product-slider__slide">
-                                <img src="img/product_01.jpg" alt="">
-                            </div>
+                            <a href="javascript:void(0)" class="swiper-slide product-slider__slide offcanvas-link" data-target="offcanvas-slider" data-slide-id="1">
+                                <img src="img/product_1.webp" alt="">
+                            </a>
+                            <a href="javascript:void(0)" class="swiper-slide product-slider__slide offcanvas-link" data-target="offcanvas-slider" data-slide-id="2">
+                                <img src="img/product_2.webp" alt="">
+                            </a>
+                            <a href="javascript:void(0)" class="swiper-slide product-slider__slide offcanvas-link" data-target="offcanvas-slider" data-slide-id="3">
+                                <img src="img/product_3.webp" alt="">
+                            </a>
                         </div>
                         <div class="swiper-pagination product-slider__pagination"></div>
                         <div class="swiper-button-prev product-slider__prev"></div>
@@ -162,16 +159,13 @@
                     <div class="product__thumbs-slider swiper product-thumbs-slider">
                         <div class="swiper-wrapper product-thumbs-slider__wrapper">
                             <div class="swiper-slide product-thumbs-slider__slide">
-                                <img src="img/product_01.jpg" alt="">
+                                <img src="img/product_1.webp" alt="">
                             </div>
                             <div class="swiper-slide product-thumbs-slider__slide">
-                                <img src="img/product_01.jpg" alt="">
+                                <img src="img/product_2.webp" alt="">
                             </div>
                             <div class="swiper-slide product-thumbs-slider__slide">
-                                <img src="img/product_01.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide product-thumbs-slider__slide">
-                                <img src="img/product_01.jpg" alt="">
+                                <img src="img/product_3.webp" alt="">
                             </div>
                         </div>
                         <div class="swiper-button-prev product-thumbs-slider__prev"></div>
@@ -248,17 +242,16 @@
                                 <span class="size__value">xl</span>
                             </label>
                         </div>
-                        <!-- del -->
-                        <a href="javascript:void(0)" class="offcanvas-link" data-target="notify-available">Сообщить о поступлении</a>
-                        <a href="javascript:void(0)" class="offcanvas-link" data-target="offcanvas-slider">offcanvas-slider</a>
-                    
                     </div>
 
-                    <div class="product__buy-wrapper">
+                    <!-- del -->
+                    <a href="javascript:void(0)" class="offcanvas-link" data-target="notify-available">Сообщить о поступлении</a>
+                    
+                        <div class="product__buy-wrapper">
                         <button class="product__buy product__buy_disabled">Добавить в корзину</button>
                     </div>
 
-                    <div class="product__available">Посмотреть <a href="#">наличие в магазине</a> и <a href="#">зарезервировать</a></div>
+                    <div class="product__available">Посмотреть <a href="javascript:void(0)" class="offcanvas-link" data-target="map">наличие в магазине</a> и <a href="javascript:void(0)" class="offcanvas-link" data-target="map">зарезервировать</a></div>
 
                     <div class="product__accordion accordion">
 
@@ -861,7 +854,7 @@
         <div class="offcanvas__wrapper">
             <button class="offcanvas__close"></button>
 
-            <div class="offcanvas-slider__wrapper">
+            <div class="offcanvas__content">
 
                 <div class="offcanvas-slider__main swiper offcanvas-slider-main">
                     <div class="swiper-wrapper offcanvas-slider-main__wrapper">
@@ -869,7 +862,7 @@
                             <div class="zoomist-container">
                                 <div class="zoomist-wrapper">
                                     <div class="zoomist-image">
-                                        <img src="img/full_slider_1.webp" alt="">
+                                        <img src="img/product_1.webp" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -878,7 +871,7 @@
                             <div class="zoomist-container">
                                 <div class="zoomist-wrapper">
                                     <div class="zoomist-image">
-                                        <img src="img/full_slider_1.webp" alt="">
+                                        <img src="img/product_2.webp" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -887,7 +880,7 @@
                             <div class="zoomist-container">
                                 <div class="zoomist-wrapper">
                                     <div class="zoomist-image">
-                                        <img src="img/full_slider_1.webp" alt="">
+                                        <img src="img/product_3.webp" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -901,13 +894,13 @@
                 <div class="offcanvas-slider__thumbs swiper offcanvas-slider-thumbs">
                     <div class="swiper-wrapper offcanvas-slider-thumbs__wrapper">
                         <div class="swiper-slide offcanvas-slider-thumbs__slide">
-                            <img src="img/full_slider_1.webp" alt="">
+                            <img src="img/product_1.webp" alt="">
                         </div>
                         <div class="swiper-slide offcanvas-slider-thumbs__slide">
-                            <img src="img/full_slider_1.webp" alt="">
+                            <img src="img/product_2.webp" alt="">
                         </div>
                         <div class="swiper-slide offcanvas-slider-thumbs__slide">
-                            <img src="img/full_slider_1.webp" alt="">
+                            <img src="img/product_3.webp" alt="">
                         </div>
                     </div>
                     <div class="swiper-button-prev offcanvas-slider-thumbs__prev"></div>
@@ -915,22 +908,65 @@
                 </div>  
 
             </div>
-
-            <!-- <div class="offcanvas__content">
-                <div class="full-slider__wrapper">
-                    <div class="slide">
-                        <div class="zoomist-container">
-                            <div class="zoomist-wrapper">
-                                <div class="zoomist-image">
-                                    <img src="img/full_slider_1.webp" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>        
     </div>
+
+    <div class="offcanvas map" id="map">
+        <div class="offcanvas__overlay"></div>
+        <div class="offcanvas__wrapper">
+            <button class="offcanvas__close"></button>
+            <div class="offcanvas__title">Наличие в магазинах</div>
+            <div class="offcanvas__content">
+                <div class="map__map"></div>
+                <div class="map__content">
+                    <div class="map__city-select city-select">
+                        <label for="city_select" class="city-select__label">Ваш город</label>   
+                        <input type="text" id="city_select" class="city-select__input">                 
+                    </div>
+                    <div class="map__text">Выберите размер и магазин для бронирования товара на 24 часа</div>
+                    
+                    <div class="map__size-select map-size-select">
+                        <div class="map-size-select__header">
+                            <div class="map-size-select__title">Размер:</div>
+                            <a href="#" class="map-size-select__table-link">Гид по размерам</a>
+                        </div>
+                        <div class=" map-size-select__list">
+                            <label class="map-size-select__item">
+                                <input type="radio" name="map-size-select" class="map-size-select__input">
+                                <span class="map-size-select__value">xs</span>
+                            </label>
+                            <label class="map-size-select__item">
+                                <input type="radio" name="map-size-select" class="map-size-select__input">
+                                <span class="map-size-select__value">s</span>
+                            </label>
+                            <label class="map-size-select__item">
+                                <input type="radio" name="map-size-select" class="map-size-select__input">
+                                <span class=" map-size-select__value">m</span>
+                            </label>
+                            <label class="map-size-select__item">
+                                <input type="radio" name="map-size-select" class="map-size-select__input">
+                                <span class=" map-size-select__value">l</span>
+                            </label>
+                            <label class="map-size-select__item">
+                                <input type="radio" name="map-size-select" class="map-size-select__input">
+                                <span class="map-size-select__value">xl</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="map__checkbox">
+                        <input class="map__checkbox-input" type="checkbox" id="available_booking" name="available_booking">
+                        <label class="map__checkbox-label" for="available_booking">Доступно к бронированию</label>
+                        <div>wait new design</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>        
+    </div>
+
+
+
     <!-- end offcanvas -->
     
     <nav class="mob-menu">
