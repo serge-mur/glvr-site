@@ -22,6 +22,37 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // main size select
+    const sizeItem = document.querySelectorAll('.size__item');
+    const buttonAddCart = document.querySelector('.product__buy_add-cart');
+    const buttonNotAvailable = document.querySelector('.product__buy_not-available');
+    const buttonGotoCart = document.querySelector('.product__buy_goto-cart');
+    const sizeTitle = document.querySelector('.size__title');
+
+    sizeItem.forEach(sizeItem => {
+        sizeItem.addEventListener('click', (e) => {
+            const sizeButton = e.currentTarget;
+            buttonAddCart.classList.remove('product__buy_disabled');
+            sizeTitle.style.color = '#111215';
+            if(sizeButton.classList.contains('size__item_not-available')) {
+                buttonAddCart.style.display = 'none';
+                buttonNotAvailable.style.display = 'flex';
+            } else {
+                buttonNotAvailable.style.display = 'none';
+                buttonAddCart.style.display = 'flex';
+            }
+        });
+    });
+    buttonAddCart.addEventListener('click', (e) => {
+        if(!buttonAddCart.classList.contains('product__buy_disabled')) {
+            alert('Товар добавлен в корзину');            
+        } else {
+            // sizeTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            sizeTitle.style.color = '#F73E12';
+        }
+
+    });
+
     // accordion collapse
     const accordionItem = document.querySelectorAll('.accordion__item');
     accordionItem.forEach(el => {

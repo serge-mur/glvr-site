@@ -225,8 +225,8 @@
                                 <input type="radio" name="size" class="size__input">
                                 <span class="size__value">xs</span>
                             </label>
-                            <label class="size__item">
-                                <input type="radio" name="size" class="size__input" disabled>
+                            <label class="size__item size__item_not-available">
+                                <input type="radio" name="size" class="size__input">
                                 <span class="size__value">s</span>
                             </label>
                             <label class="size__item">
@@ -234,21 +234,26 @@
                                 <span class="size__value">m</span>
                             </label>
                             <label class="size__item">
-                                <input type="radio" name="size" class="size__input" checked>
+                                <input type="radio" name="size" class="size__input">
                                 <span class="size__value">l</span>
                             </label>
                             <label class="size__item">
                                 <input type="radio" name="size" class="size__input">
                                 <span class="size__value">xl</span>
                             </label>
+
+                            <!-- <label class="size__item size__item_one-size">
+                                <input type="radio" name="size" class="size__input">
+                                <span class="size__value">one size</span>
+                            </label> -->
+
                         </div>
                     </div>
 
-                    <!-- del -->
-                    <a href="javascript:void(0)" class="offcanvas-link" data-target="notify-available">Сообщить о поступлении</a>
-                    
-                        <div class="product__buy-wrapper">
-                        <button class="product__buy product__buy_disabled">Добавить в корзину</button>
+                    <div class="product__buy-wrapper">
+                        <button class="product__buy product__buy_add-cart product__buy_disabled">Добавить в корзину</button>
+                        <button style="display: none;" class="product__buy product__buy_not-available offcanvas-link" data-target="notify-available">Сообщить о поступлении</button>
+                        <button style="display: none;" class="product__buy product__buy_goto-cart" onclick="window.location.href = '/cart/';">Перейти в корзину</button>
                     </div>
 
                     <div class="product__available">Посмотреть <a href="javascript:void(0)" class="offcanvas-link" data-target="map">наличие в магазине</a> и <a href="javascript:void(0)" class="offcanvas-link" data-target="map">зарезервировать</a></div>
