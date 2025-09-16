@@ -551,6 +551,74 @@ img, video {
 }
 /* #endregion breadcrumb */
 
+/* #region dropdown */
+.dropdown {
+    position: relative;
+    user-select: none;
+}
+.dropdown__button {
+    height: 36px;
+    width: 100%;
+    border: 1px solid var(--lines);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 136%;   
+    cursor: pointer;
+}
+.dropdown__button:after {
+    width: 14px;
+    height: 8px;
+    flex-shrink: 0;
+    content: "";
+    background: url('data:image/svg+xml,<svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.646484 5.14648C0.451222 5.34175 0.451222 5.65825 0.646484 5.85352C0.841746 6.04878 1.15825 6.04878 1.35352 5.85352L6 1.20703L10.6465 5.85352C10.8417 6.04878 11.1583 6.04878 11.3535 5.85352C11.5488 5.65825 11.5488 5.34175 11.3535 5.14648L6.35352 0.146485C6.15825 -0.0487775 5.84175 -0.0487775 5.64648 0.146485L0.646484 5.14648Z" fill="%2352525B"/></svg>') no-repeat center center;
+    transform: rotate(180deg);
+}
+.dropdown__content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 15px;
+    border: 1px solid var(--lines);
+    border-top: none;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    display: none;
+    z-index: 1;
+}
+.dropdown__item {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    text-decoration: none;  
+    cursor: pointer;
+    padding: 7px 16px;
+}
+.dropdown__item_active {
+    background-color: var(--disabled);
+}
+.dropdown_open .dropdown__button {
+}
+.dropdown_open .dropdown__button:after {
+    transform: rotate(0deg);
+}
+.dropdown_open .dropdown__content {
+    display: flex;
+}
+/* #endregion dropdown */
+
 /* #region footer */
 .footer {
     padding: 0 0 24px 0;

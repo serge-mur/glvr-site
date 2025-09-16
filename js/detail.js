@@ -45,7 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     buttonAddCart.addEventListener('click', (e) => {
         if(!buttonAddCart.classList.contains('product__buy_disabled')) {
-            alert('Товар добавлен в корзину');            
+            // нужно будет помечать размер, который уже в корзине size__item_in-cart
+            setTimeout(() => {
+                buttonAddCart.style.display = 'none';
+                buttonGotoCart.style.display = 'flex';
+            }, 500);
+            // alert('Товар добавлен в корзину');            
         } else {
             // sizeTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
             sizeTitle.style.color = '#F73E12';

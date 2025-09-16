@@ -1,0 +1,55 @@
+@import 'style.css';
+
+/* #region header */
+.stores__header {
+    height: 340px;
+    background: url(../img/stores_header.png) no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    position: relative;
+    margin: 46px -15px 0 -15px;
+}
+.stores__header-wrapper {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.stores__title {
+    color: #fff;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 110%;
+    letter-spacing: -0.4px;
+}
+.breadcrumb_stores {
+    display: block;
+    margin-bottom: 10px;
+}
+.breadcrumb_stores .breadcrumb__link {
+    color: #fff;
+}
+/* #endregion header */
+
+/* #region tabs */
+.stores__tabs {
+    height: 44px;
+}
+.stores-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.stores-tabs__item {
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid transparent;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+.stores-tabs__item_active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+/* #endregion tabs */
