@@ -168,13 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-
-
-      
     }
-
-
-
-
 
 });

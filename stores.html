@@ -144,33 +144,223 @@
                 </div>
             </div>
 
-            <div class="stores__tabs stores-tabs">
-                <div class="stores-tabs__item">На карте</div>
-                <div class="stores-tabs__item stores-tabs__item_active">Списком</div>
-            </div>
-
-            <div class="stores__content">
-                <div class="dropdown dropdown_stores">
-                    <div class="dropdown__button">Москва</div>
-                    <div class="dropdown__content">
-                        <a href="#" class="dropdown__item">Санкт-Петербург</a>
-                        <a href="#" class="dropdown__item dropdown__item_active">Москва</a>
-                        <a href="#" class="dropdown__item">Нижний Новгород</a>
-                        <a href="#" class="dropdown__item">Красноярск</a>
-                        <a href="#" class="dropdown__item">Руза</a>
-                        <a href="#" class="dropdown__item">Владикавказ</a>
-                        <a href="#" class="dropdown__item">Омск</a>
-                    </div>
+            <div class="stores__wrapper stores__wrapper_map">
+                <div class="stores__layers-toggle layers-toggle">
+                    <div class="layers-toggle__item layers-toggle__item_map">На карте</div>
+                    <div class="layers-toggle__item layers-toggle__item_content layers-toggle_active">Списком</div>
                 </div>
 
-                <div class="stores__list">
-                    <div class="stores__item">
-                        123
-                    </div>
+                <div class="stores__map stores-map">
+                    <div class="stores-map__marker" data-marker="1" style="top:20%;left:40%;"></div>
+                    <div class="stores-map__marker" data-marker="2" style="top:40%;left:20%;"></div>
+                    <div class="stores-map__marker" data-marker="3" style="top:60%;left:30%;"></div>
                 </div>
 
-            </div>
+                <div class="stores__content">
+                    <div class="stores__city-select dropdown dropdown_stores">
+                        <div class="dropdown__button">Москва</div>
+                        <div class="dropdown__content">
+                            <a href="#" class="dropdown__item">Санкт-Петербург</a>
+                            <a href="#" class="dropdown__item dropdown__item_active">Москва</a>
+                            <a href="#" class="dropdown__item">Нижний Новгород</a>
+                            <a href="#" class="dropdown__item">Красноярск</a>
+                            <a href="#" class="dropdown__item">Руза</a>
+                            <a href="#" class="dropdown__item">Владикавказ</a>
+                            <a href="#" class="dropdown__item">Омск</a>
+                        </div>
+                    </div>
 
+                    <div class="stores__tabs stores-tabs">
+                        <div data-tab-target="#branded" class="stores-tabs__item active">Фирменные</div>
+                        <div data-tab-target="#multi" class="stores-tabs__item">Мультибрендовые</div>
+                    </div>
+
+                    <div id="branded" data-tab-content class="stores__branded active">
+                        <div class="stores__list">
+                            <div class="stores__item stores-item" data-point="1">                    
+                                <div class="stores-item__main">
+                                    <div class="stores-item__name">ТРК «Европолис Ростокино»</div>
+                                    <div class="stores-item__metro-list">
+                                        <div class="stores-item__metro">Ботанический сад</div>
+                                    </div>
+                                    <div class="stores-item__address">г. Москва, пр-т Мира, д. 211, корпус 2, 1й торговый уровень</div>    
+                                </div>
+                                <div class="stores-item__additional">
+
+                                    <table class="stores-item__working-hours">
+                                        <caption>Режим работы</caption>
+                                        <tr>
+                                            <td>Понедельник</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Вторник</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Среда</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Четверг</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Пятница</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Суббота</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Воскресение</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                    </table>
+                                    <button class="stores-item__build-route">Построить маршрут</button>
+                                </div>    
+                            </div>
+                            <div class="stores__item stores-item" data-point="2">                    
+                                <div class="stores-item__main">
+                                    <div class="stores-item__name">ТЦ «Метрополис»</div>
+                                    <div class="stores-item__metro-list">
+                                        <div class="stores-item__metro stores-item__metro_color_1">Балтийская</div>
+                                    </div>
+                                    <div class="stores-item__address">г. Москва, Ленинградское ш., 16А, стр. 4, 2 этаж</div>    
+                                </div>
+                                <div class="stores-item__additional">
+                                    <table class="stores-item__working-hours">
+                                        <caption>Режим работы</caption>
+                                        <tr>
+                                            <td>Понедельник</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Вторник</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Среда</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Четверг</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Пятница</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Суббота</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Воскресение</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                    </table>
+                                    <button class="stores-item__build-route">Построить маршрут</button>
+                                </div>
+                            </div>  
+                            <div class="stores__item stores-item" data-point="3">                    
+                                <div class="stores-item__main">
+                                    <div class="stores-item__name">ТЦ «Метрополис»</div>
+                                    <div class="stores-item__metro-list">
+                                        <div class="stores-item__metro stores-item__metro_color_1">Балтийская</div>
+                                    </div>
+                                    <div class="stores-item__address">г. Москва, Ленинградское ш., 16А, стр. 4, 2 этаж</div>    
+                                </div>
+                                <div class="stores-item__additional">
+                                    <table class="stores-item__working-hours">
+                                        <caption>Режим работы</caption>
+                                        <tr>
+                                            <td>Понедельник</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Вторник</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Среда</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Четверг</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Пятница</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Суббота</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Воскресение</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                    </table>
+                                    <button class="stores-item__build-route">Построить маршрут</button>
+                                </div>
+                            </div>  
+                        </div>                       
+                    </div>
+
+                    <div id="multi" data-tab-content class="stores__multi">
+                        <div class="stores__list">
+                            <div class="stores__item stores-item">                    
+                                <div class="stores-item__main">
+                                    <div class="stores-item__name">ТРК «Европолис Ростокино»</div>
+                                    <div class="stores-item__metro-list">
+                                        <div class="stores-item__metro">Ботанический сад</div>
+                                    </div>
+                                    <div class="stores-item__address">г. Москва, пр-т Мира, д. 211, корпус 2, 1й торговый уровень</div>    
+                                </div>
+                                <div class="stores-item__additional">
+
+                                    <table class="stores-item__working-hours">
+                                        <caption>Режим работы</caption>
+                                        <tr>
+                                            <td>Понедельник</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Вторник</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Среда</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Четверг</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Пятница</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Суббота</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Воскресение</td>
+                                            <td>10:00–22:00</td>
+                                        </tr>
+                                    </table>
+                                    <button class="stores-item__build-route">Построить маршрут</button>
+                                </div>    
+                            </div>
+                        </div>         
+                    </div>
+
+                </div>
+            </div>
         </div>
         
     </main>
