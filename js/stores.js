@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     points.forEach(point => {
         id = point.dataset.point;
         let marker = document.querySelector(`.stores-map__marker[data-marker="${id}"]`);
-         // console.log(marker);
+        console.log(marker);
         marker.addEventListener('click', function(e) {
             // для мобилы
             storesContent.classList.add('stores__content_point');
