@@ -1644,6 +1644,152 @@
 /* #endregion offcanvas slider */
 
 /* #region offcanvas map */
-.map{
+.map {
+}
+.map__wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+}
+.map__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.map__top {
+    background-color: var(--disabled);
+    padding: 40px 15px 15px 15px;
+}
+.map__title {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    letter-spacing: -0.4px;
+    margin-bottom: 10px;
+}
+.map__text {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 132%;
+    margin-bottom: 15px;
+}
+.map__city-select {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 132%;
+}
+.map__select {
+    margin: 15px 0;
+}
+.map__options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.map__checkbox {
+}
+.map__checkbox-input {
+}
+.map__checkbox-label {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 132%;
+}
+.map__size-guide {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 132%;
+}
+.goto-map {
+}
+.goto-map__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(63, 63, 70, .4);
+    height: 116px;
+}
+.goto-map__button {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: #fff;
+    height: 30px;
+    padding: 0 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+.map__store-list {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+}
+.store-item {
+}
+@media (min-width: 1200px) {
+    .map {
+    }
+    .map__wrapper {
+        position: relative;
+        display: grid;
+        grid-template-columns: 8fr 4fr;
+        height: 100%;
+    }
+    .map__content {
+        position: relative;
+        order: 1;
+    }
+    .map__top {
+        background-color: #fff;
+        padding: 40px 15px 15px 15px;
+    }
+    .map__title {
+        color: var(--primary);
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 120%;
+        letter-spacing: -0.4px;
+        margin-bottom: 10px;
+    }
+    .map__text {
+    }
+    .map__city-select {
+    }
+    .map__options {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .map__checkbox {
+    }
+    .map__checkbox-input {
+    }
+    .map__checkbox-label {
+    }
+    .map__goto-map {
+    }
+    .goto-map {
+        display: none;
+    }
+
+    .map__store-list {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: auto;
+    }
 }
 /* #endregion offcanvas map */

@@ -916,56 +916,85 @@
         </div>        
     </div>
 
-    <div class="offcanvas map" id="map">
+    <div class="offcanvas map offcanvas_open" id="map">
         <div class="offcanvas__overlay"></div>
         <div class="offcanvas__wrapper">
             <button class="offcanvas__close"></button>
-            <div class="offcanvas__title">Наличие в магазинах</div>
             <div class="offcanvas__content">
-                <div class="map__map"></div>
-                <div class="map__content">
-                    <div class="map__city-select city-select">
-                        <label for="city_select" class="city-select__label">Ваш город</label>   
-                        <input type="text" id="city_select" class="city-select__input">                 
-                    </div>
-                    <div class="map__text">Выберите размер и магазин для бронирования товара на 24 часа</div>
-                    
-                    <div class="map__size-select map-size-select">
-                        <div class="map-size-select__header">
-                            <div class="map-size-select__title">Размер:</div>
-                            <a href="#" class="map-size-select__table-link">Гид по размерам</a>
+                <div class="map__wrapper">
+                    <div class="map__content">
+                        <div class="map__top">
+                            <div class="map__title">Наличие в магазинах</div>
+                            <div class="map__text">Выберите размер и магазин для бронирования товара</div>
+                            <div class="map__city-select">Город: <a href="#">г. Москва</a></div>
+                            <select class="map__select" name="select">
+                                <option value="110">110</option>
+                                <option value="140" selected>140</option>
+                                <option value="160">160</option>
+                            </select>
+                            <div class="map__options">
+                                <div class="map__checkbox">
+                                    <input class="map__checkbox-input" type="checkbox" id="available_booking" name="available_booking">
+                                    <label class="map__checkbox-label" for="available_booking">Доступно к бронированию</label>
+                                </div>
+                                <a class="map__size-guide" href="#">Гид по размерам</a>
+                            </div>
                         </div>
-                        <div class=" map-size-select__list">
-                            <label class="map-size-select__item">
-                                <input type="radio" name="map-size-select" class="map-size-select__input">
-                                <span class="map-size-select__value">xs</span>
-                            </label>
-                            <label class="map-size-select__item">
-                                <input type="radio" name="map-size-select" class="map-size-select__input">
-                                <span class="map-size-select__value">s</span>
-                            </label>
-                            <label class="map-size-select__item">
-                                <input type="radio" name="map-size-select" class="map-size-select__input">
-                                <span class=" map-size-select__value">m</span>
-                            </label>
-                            <label class="map-size-select__item">
-                                <input type="radio" name="map-size-select" class="map-size-select__input">
-                                <span class=" map-size-select__value">l</span>
-                            </label>
-                            <label class="map-size-select__item">
-                                <input type="radio" name="map-size-select" class="map-size-select__input">
-                                <span class="map-size-select__value">xl</span>
-                            </label>
+                        <div class="map__goto-map goto-map">
+                            <div class="goto-map__inner">
+                                <button class="goto-map__button">На карте</button>
+                            </div>
                         </div>
-                    </div>
+                        <div class="map__store-list">
+                            <div class="map__store-item store-item">1</div>
+                            <div class="map__store-item store-item">2</div>
+                            <div class="map__store-item store-item">3</div>
+                            <div class="map__store-item store-item">4</div>
+                        </div>
+                        
+                        <!-- <div class="map__city-select city-select">
+                            <label for="city_select" class="city-select__label">Ваш город</label>   
+                            <input type="text" id="city_select" class="city-select__input">                 
+                        </div>
+                        <div class="map__text">Выберите размер и магазин для бронирования товара на 24 часа</div>
+                        
+                        <div class="map__size-select map-size-select">
+                            <div class="map-size-select__header">
+                                <div class="map-size-select__title">Размер:</div>
+                                <a href="#" class="map-size-select__table-link">Гид по размерам</a>
+                            </div>
+                            <div class=" map-size-select__list">
+                                <label class="map-size-select__item">
+                                    <input type="radio" name="map-size-select" class="map-size-select__input">
+                                    <span class="map-size-select__value">xs</span>
+                                </label>
+                                <label class="map-size-select__item">
+                                    <input type="radio" name="map-size-select" class="map-size-select__input">
+                                    <span class="map-size-select__value">s</span>
+                                </label>
+                                <label class="map-size-select__item">
+                                    <input type="radio" name="map-size-select" class="map-size-select__input">
+                                    <span class=" map-size-select__value">m</span>
+                                </label>
+                                <label class="map-size-select__item">
+                                    <input type="radio" name="map-size-select" class="map-size-select__input">
+                                    <span class=" map-size-select__value">l</span>
+                                </label>
+                                <label class="map-size-select__item">
+                                    <input type="radio" name="map-size-select" class="map-size-select__input">
+                                    <span class="map-size-select__value">xl</span>
+                                </label>
+                            </div>
+                        </div>-->
 
-                    <div class="map__checkbox">
-                        <input class="map__checkbox-input" type="checkbox" id="available_booking" name="available_booking">
-                        <label class="map__checkbox-label" for="available_booking">Доступно к бронированию</label>
-                        <div>wait new design</div>
-                    </div>
 
+
+                    </div>  
+                    <div class="map__map">
+                        <img src="img/map_blank_del.png" alt="">
+                    </div>                  
                 </div>
+
             </div>
         </div>        
     </div>
