@@ -170,4 +170,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    // map
+    const storeItemTitle = document.querySelectorAll('.store-item__title');
+    storeItemTitle.forEach(el => {
+        el.addEventListener("click", (e) => {         
+            el.closest('.store-item').classList.toggle('store-item_open');
+        });
+    });
+
+
 });
