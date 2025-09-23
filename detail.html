@@ -920,78 +920,193 @@
         <div class="offcanvas__overlay"></div>
         <div class="offcanvas__wrapper">
             <button class="offcanvas__close"></button>
-            <div class="offcanvas__content">
-                <div class="map__wrapper">
-                    <div class="map__content">
-                        <div class="map__top">
-                            <div class="map__title">Наличие в магазинах</div>
-                            <div class="map__text">Выберите размер и магазин для бронирования товара</div>
-                            <div class="map__city-select">Город: <a href="#">г. Москва</a></div>
-                            <select class="map__select" name="select">
-                                <option value="110">110</option>
-                                <option value="140" selected>140</option>
-                                <option value="160">160</option>
-                            </select>
-                            <div class="map__options">
-                                <div class="map__checkbox">
-                                    <input class="map__checkbox-input" type="checkbox" id="available_booking" name="available_booking">
-                                    <label class="map__checkbox-label" for="available_booking">Доступно к бронированию</label>
-                                </div>
-                                <a class="map__size-guide" href="#">Гид по размерам</a>
+            
+            <div class="map__wrapper">
+                <div class="map__map" id="map-container"></div>
+
+                <div class="map__content">
+                    <div class="map__top">
+                        <div class="map__title">Наличие в магазинах</div>
+                        <div class="map__text">Выберите размер и магазин для бронирования товара</div>
+                        <div class="map__city-select">Город: <a href="#">г. Москва</a></div>
+                        <select class="map__select" name="select">
+                            <option value="110">110</option>
+                            <option value="140" selected>140</option>
+                            <option value="160">160</option>
+                        </select>
+                        <div class="map__options">
+                            <div class="map__checkbox">
+                                <input class="map__checkbox-input" type="checkbox" id="available_booking" name="available_booking">
+                                <label class="map__checkbox-label" for="available_booking">Доступно к бронированию</label>
                             </div>
+                            <a class="map__size-guide" href="#">Гид по размерам</a>
+                        </div>
+                        <div class="map__goto-list goto-list">
+                            <button class="goto-list__button">Назад к списку магазинов</button>    
                         </div>
                         <div class="map__goto-map goto-map">
                             <div class="goto-map__inner">
                                 <button class="goto-map__button">На карте</button>
                             </div>
                         </div>
-                        <div class="map__store-list">
-                            <div class="map__store-item store-item">
-                                <div class="store-item__title">Магазин GLVR г. Москва ТРЦ «Океания»</div>
-                                <div class="store-item__content">
-                                    <div class="store-item__inner">
-                                        <div class="store-item__size store-size">
-                                            <div class="store-size__title">Доступные размеры: <span>Осталось мало</span></div>
-                                            <div class="store-size__list">
-                                                <label class="store-size__item">
-                                                    <input type="radio" name="store-size" class="store-size__input">
-                                                    <span class="store-size__value">110</span>
-                                                </label>
-                                                <label class="store-size__item">
-                                                    <input type="radio" name="store-size" class="store-size__input">
-                                                    <span class="store-size__value">116</span>
-                                                </label>
-                                            </div>
-                                            <button class="store-size__apply">Забронировать</button>
+                    </div>
+
+                    <div class="map__store-list">
+                        <div class="map__store-item store-item">
+                            <div class="store-item__title">Магазин GLVR г. Москва ТРЦ «Океания»</div>
+                            <div class="store-item__content">
+                                <div class="store-item__inner">
+                                    <div class="store-item__size store-size">
+                                        <div class="store-size__title">Доступные размеры: <span>Осталось мало</span></div>
+                                        <div class="store-size__list">
+                                            <label class="store-size__item">
+                                                <input type="radio" name="store-size" class="store-size__input">
+                                                <span class="store-size__value">110</span>
+                                            </label>
+                                            <label class="store-size__item">
+                                                <input type="radio" name="store-size" class="store-size__input">
+                                                <span class="store-size__value">116</span>
+                                            </label>
                                         </div>
-                                        <div class="store-item__info store-info">
-                                            <div class="store-info__title">Адрес и график работы</div>
-                                            <div class="store-info__content">
-                                                <div class="store-info__metro">Павелецкая</div>
-                                                <div class="store-info__address">г. Москва, Кутузовский просп., 57, 2 этаж</div>
-                                                <div class="store-info__phone">+7 (495) 995-11-25 доб. 851</div>
-                                                <div class="store-info__working-hours">Пн-Вс с 10:00 до 22:00</div>
-                                            </div>
+                                        <button class="store-size__apply store-size__apply_disabled">Забронировать</button>
+                                    </div>
+                                    <div class="store-item__info store-info">
+                                        <div class="store-info__title">Адрес и график работы</div>
+                                        <div class="store-info__content">
+                                            <div class="store-info__metro">Павелецкая</div>
+                                            <div class="store-info__address">г. Москва, Кутузовский просп., 57, 2 этаж</div>
+                                            <div class="store-info__phone">+7 (495) 995-11-25 доб. 851</div>
+                                            <div class="store-info__working-hours">Пн-Вс с 10:00 до 22:00</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="map__store-item store-item">2</div>
-                            <div class="map__store-item store-item">3</div>
-                            <div class="map__store-item store-item">4</div>
+                        </div>
+                        <div class="map__store-item store-item">
+                            <div class="store-item__title">Магазин GLVR г. Москва ТРЦ «Океания»</div>
+                            <div class="store-item__content">
+                                <div class="store-item__inner">
+                                    <div class="store-item__size store-size">
+                                        <div class="store-size__title">Доступные размеры: <span>Осталось мало</span></div>
+                                        <div class="store-size__list">
+                                            <label class="store-size__item">
+                                                <input type="radio" name="store-size" class="store-size__input">
+                                                <span class="store-size__value">110</span>
+                                            </label>
+                                            <label class="store-size__item">
+                                                <input type="radio" name="store-size" class="store-size__input">
+                                                <span class="store-size__value">116</span>
+                                            </label>
+                                        </div>
+                                        <button class="store-size__apply">Забронировать</button>
+                                    </div>
+                                    <div class="store-item__info store-info">
+                                        <div class="store-info__title">Адрес и график работы</div>
+                                        <div class="store-info__content">
+                                            <div class="store-info__metro">Павелецкая</div>
+                                            <div class="store-info__address">г. Москва, Кутузовский просп., 57, 2 этаж</div>
+                                            <div class="store-info__phone">+7 (495) 995-11-25 доб. 851</div>
+                                            <div class="store-info__working-hours">Пн-Вс с 10:00 до 22:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map__store-item store-item">
+                            <div class="store-item__title">Магазин GLVR г. Москва ТРЦ «Океания»</div>
+                            <div class="store-item__content">
+                                <div class="store-item__inner">
+                                    <div class="store-item__size store-size">
+                                        <div class="store-size__title">Доступные размеры: <span>Осталось мало</span></div>
+                                        <div class="store-size__list">
+                                            <label class="store-size__item">
+                                                <input type="radio" name="store-size" class="store-size__input">
+                                                <span class="store-size__value">110</span>
+                                            </label>
+                                            <label class="store-size__item">
+                                                <input type="radio" name="store-size" class="store-size__input">
+                                                <span class="store-size__value">116</span>
+                                            </label>
+                                        </div>
+                                        <button class="store-size__apply store-size__apply_disabled">Забронировать</button>
+                                    </div>
+                                    <div class="store-item__info store-info">
+                                        <div class="store-info__title">Адрес и график работы</div>
+                                        <div class="store-info__content">
+                                            <div class="store-info__metro">Павелецкая</div>
+                                            <div class="store-info__address">г. Москва, Кутузовский просп., 57, 2 этаж</div>
+                                            <div class="store-info__phone">+7 (495) 995-11-25 доб. 851</div>
+                                            <div class="store-info__working-hours">Пн-Вс с 10:00 до 22:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map__store-item store-item">
+                            <div class="store-item__title">Магазин GLVR г. Москва ТРЦ «Океания»</div>
+                            <div class="store-item__content">
+                                <div class="store-item__inner">
+                                    <div class="store-item__size store-size">
+                                        <div class="store-size__title">Доступные размеры: <span>Осталось мало</span></div>
+                                        <div class="store-size__list">
+                                            <label class="store-size__item">
+                                                <input type="radio" name="store-size" class="store-size__input">
+                                                <span class="store-size__value">110</span>
+                                            </label>
+                                            <label class="store-size__item">
+                                                <input type="radio" name="store-size" class="store-size__input">
+                                                <span class="store-size__value">116</span>
+                                            </label>
+                                        </div>
+                                        <button class="store-size__apply">Забронировать</button>
+                                    </div>
+                                    <div class="store-item__info store-info">
+                                        <div class="store-info__title">Адрес и график работы</div>
+                                        <div class="store-info__content">
+                                            <div class="store-info__metro">Павелецкая</div>
+                                            <div class="store-info__address">г. Москва, Кутузовский просп., 57, 2 этаж</div>
+                                            <div class="store-info__phone">+7 (495) 995-11-25 доб. 851</div>
+                                            <div class="store-info__working-hours">Пн-Вс с 10:00 до 22:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                    </div>  
-                    <div class="map__map">
-                        <img src="img/map_blank_del.png" alt="">
-                    </div>                  
-                </div>
+                    </div>
 
+                </div>
             </div>
+
+            <div class="map__confirm-booking confirm-booking" style="display: none;">
+                <button class="confirm-booking__back">Назад</button>
+                <div class="confirm-booking__title">Подтвердите бронирование</div>
+                <div class="confirm-booking__product booking-product">
+                    <div class="booking-product__image">
+                        <img src="img/booking_photo.png" alt="">
+                    </div>
+                    <div class="booking-product__content">
+                        <div>
+                            <div class="booking-product__title">Брюки силуэта палаццо трикотажные с поясом на резинке</div>
+                            <div class="booking-product__price">4 990 ₽</div>
+                        </div>
+                        <div class="booking-product__size">Размер: S</div>
+                    </div>
+                </div>
+                <div class="confirm-booking__wrapper">
+                    <div class="confirm-booking__text">
+                        <p>Товар для вас будет зарезервирован ровно на 24 часов.</p>
+                        <p>Подтверждаете?</p>
+                    </div>
+                    <button class="confirm-booking__apply">Подтвердить</button>
+                </div>
+                <div class="confirm-booking__offer">
+                    Нажимая «Подтвердить», Вы подтверждаете, что ознакомились с <a href="#">Политикой персональных данных</a> и согласны с обработкой Ваших персональных данных
+                </div>
+            </div>
+
         </div>        
     </div>
-
-
 
     <!-- end offcanvas -->
     
@@ -1042,6 +1157,7 @@
     <script src="lib/swiper/swiper-bundle.min.js"></script>
     <script src="lib/mmenu-light/mmenu-light.js"></script>
     <script src="lib/zoomist/zoomist.umd.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8de28ebe-246d-43d7-afcf-e6bd1e3157fb&lang=ru_RU" type="text/javascript"></script>
     <script src="js/script.js"></script>
     <script src="js/detail.js"></script>
 </body>

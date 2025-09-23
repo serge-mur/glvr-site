@@ -171,11 +171,51 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // map
+
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("map-container", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.76, 37.64],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 7
+        });
+    }
+
+
+
+    // store collapse
     const storeItemTitle = document.querySelectorAll('.store-item__title');
     storeItemTitle.forEach(el => {
         el.addEventListener("click", (e) => {         
             el.closest('.store-item').classList.toggle('store-item_open');
         });
+    });
+    // store info collapse
+    const storeInfoTitle = document.querySelectorAll('.store-info__title');
+    storeInfoTitle.forEach(el => {
+        el.addEventListener("click", (e) => {         
+            el.closest('.store-info').classList.toggle('store-info_open');
+        });
+    });
+    // map events
+    const mapWrapper = document.querySelector('.map__wrapper');
+    const map = document.querySelector('.map__map');
+    const content = document.querySelector('.map__content');
+    const gotoMapBtn = document.querySelector('.goto-map__button');
+    const gotoListBtn = document.querySelector('.goto-list__button');
+    gotoMapBtn.addEventListener('click', function(e) {
+        mapWrapper.classList.add('map__wrapper_map');
+    });
+    gotoListBtn.addEventListener('click', function(e) {
+        mapWrapper.classList.remove('map__wrapper_map');
     });
 
 
