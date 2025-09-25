@@ -209,6 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mapWrapper = document.querySelector('.map__wrapper');
     const map = document.querySelector('.map__map');
     const content = document.querySelector('.map__content');
+    const list = document.querySelector('.map__store-list');
     const gotoMapBtn = document.querySelector('.goto-map__button');
     const gotoListBtn = document.querySelector('.goto-list__button');
     gotoMapBtn.addEventListener('click', function(e) {
@@ -218,5 +219,14 @@ document.addEventListener("DOMContentLoaded", () => {
         mapWrapper.classList.remove('map__wrapper_map');
     });
 
+
+    document.querySelector('.map__marker').addEventListener("click", (e) => {     
+        // alert('124'); 
+        let id = 2;  
+        let marker = document.querySelector(`.store-item[data-point="${id}"]`);
+        marker.classList.add('store-item_open');
+        list.classList.add('map__store-list_show'); 
+        // el.closest('.store-item').classList.toggle('store-item_open');
+    });
 
 });

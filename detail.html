@@ -916,39 +916,50 @@
         </div>        
     </div>
 
-    <div class="offcanvas map offcanvas_open" id="map">
+    <div class="offcanvas map" id="map">
         <div class="offcanvas__overlay"></div>
         <div class="offcanvas__wrapper">
             <button class="offcanvas__close"></button>
             
             <div class="map__wrapper">
-                <div class="map__map" id="map-container"></div>
+                <div class="map__map" id="map-container">
+                    <div class="map__marker"></div>
+                </div>
 
                 <div class="map__content">
                     <div class="map__top">
-                        <div class="map__title">Наличие в магазинах</div>
-                        <div class="map__text">Выберите размер и магазин для бронирования товара</div>
-                        <div class="map__city-select">Город: <a href="#">г. Москва</a></div>
-                        <select class="map__select" name="select">
-                            <option value="110">110</option>
-                            <option value="140" selected>140</option>
-                            <option value="160">160</option>
-                        </select>
-                        <div class="map__options">
-                            <div class="map__checkbox">
-                                <input class="map__checkbox-input" type="checkbox" id="available_booking" name="available_booking">
-                                <label class="map__checkbox-label" for="available_booking">Доступно к бронированию</label>
+                        <div class="map__control">
+                            <div class="map__title">Наличие в магазинах</div>
+                            <div class="map__text">Выберите размер и магазин для бронирования товара</div>
+                            <div class="map__city-select">Город: <a href="#">г. Москва</a></div>
+                            <select class="map__size-select" name="select">
+                                <option value="110">110</option>
+                                <option value="140" selected>140</option>
+                                <option value="160">160</option>
+                            </select>
+                            <div class="map__options">
+                                <div class="available-booking">
+                                    <label class="available-booking__label">
+                                        <input type="checkbox" class="available-booking__input">
+                                        <span class="available-booking__slider"></span>
+                                    </label>
+                                    <span class="available-booking__title">Доступно к бронированию</span>                           
+                                </div>
+
+                                <a class="map__size-guide" href="#">Гид по размерам</a>
+                            </div>                            
+                        </div>
+                        <div class="map__toggles">
+                            <div class="map__goto-list goto-list">
+                                <button class="goto-list__button">Назад к списку магазинов</button>    
                             </div>
-                            <a class="map__size-guide" href="#">Гид по размерам</a>
+                            <div class="map__goto-map goto-map">
+                                <div class="goto-map__inner">
+                                    <button class="goto-map__button">На карте</button>
+                                </div>
+                            </div>                            
                         </div>
-                        <div class="map__goto-list goto-list">
-                            <button class="goto-list__button">Назад к списку магазинов</button>    
-                        </div>
-                        <div class="map__goto-map goto-map">
-                            <div class="goto-map__inner">
-                                <button class="goto-map__button">На карте</button>
-                            </div>
-                        </div>
+
                     </div>
 
                     <div class="map__store-list">
@@ -982,7 +993,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="map__store-item store-item">
+                        <div class="map__store-item store-item" data-point="2">
                             <div class="store-item__title">Магазин GLVR г. Москва ТРЦ «Океания»</div>
                             <div class="store-item__content">
                                 <div class="store-item__inner">
@@ -1081,6 +1092,7 @@
             <div class="map__confirm-booking confirm-booking" style="display: none;">
                 <button class="confirm-booking__back">Назад</button>
                 <div class="confirm-booking__title">Подтвердите бронирование</div>
+                <div class="confirm-booking__subtitle" style="display: none;">Заказ <span>GG456734</span> оформлен и действует до <span>26.05.2025 16:55</span></div>
                 <div class="confirm-booking__product booking-product">
                     <div class="booking-product__image">
                         <img src="img/booking_photo.png" alt="">
