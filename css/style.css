@@ -227,6 +227,38 @@ img, video {
     visibility: visible;
     opacity: .4;      
 }
+
+/* page title */
+.page-title {
+}
+.page-title__mobile {
+    display: block;
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 118%;
+    letter-spacing: -0.4px;
+    text-decoration: none;
+    margin-bottom: 10px;  
+    background: url('data:image/svg+xml,<svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.6668 19.6666L5.3335 12.9999L10.6668 6.33325" stroke="%233F3F46"/></svg>') no-repeat left center;  
+    padding-left: 21px;
+}
+.page-title__desktop {
+    display: none;
+}
+@media (min-width: 1200px) {
+    .page-title__mobile {
+        display: none;
+    }
+    .page-title__desktop {
+        display: block;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 110%;
+        letter-spacing: -0.4px; 
+        margin-bottom: 25px;      
+    } 
+}
 /* #endregion common */
 
 /* #region header */
