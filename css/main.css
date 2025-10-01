@@ -151,11 +151,27 @@
 }
 /* #endregion category */
 
-/* #region banner */
-.banner__link {
-    display: block;
+/* #region video banner */
+.video-banner {
 }
-/* #endregion banner */
+.video-banner__link {
+    display: block;
+    padding-bottom: 108.8%;
+}
+.video-banner__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (min-width: 1200px) {
+    .video-banner__link {
+        padding-bottom: 47%;
+    }   
+}
+/* #endregion video banner */
 
 /* #region goods */
 .goods-slider__slide {
