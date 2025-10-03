@@ -46,22 +46,4 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
-    const blogSlider = new Swiper('.blog-slider', {
-        slidesPerView: 1.1,
-        spaceBetween: 10,
-        breakpoints: {
-            576: {
-                slidesPerView: 2.2,
-                spaceBetween: 20,
-            },
-            1200: {
-                slidesPerView: 2.5,
-            },
-        },
-        navigation: {
-        nextEl: '.blog-slider__next',
-        prevEl: '.blog-slider__prev',
-        },
-    });
-
 });

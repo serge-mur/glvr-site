@@ -52,21 +52,27 @@ document.addEventListener("DOMContentLoaded", () => {
             megaMenu.classList.remove("megamenu_open");
         }
     });
+    overlay.addEventListener('click', (e) => {
+        overlay.classList.remove('overlay_open');
+        // header.classList.add('header_opacity');
+        document.body.classList.remove("remove-scrolling");
+        megaMenu.classList.remove("megamenu_open");
+    });
 
     const megamenuToggle = document.querySelectorAll('.megamenu__toggle');
     megamenuToggle.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
-
+            // Снимаем активность с пунктов меню
             document.querySelectorAll('.megamenu__toggle').forEach(toggle => {
                 toggle.classList.remove('megamenu__toggle_active');
             });    
+            // Активный пункт меню
             link.classList.add('megamenu__toggle_active');
             // Закрываем все подменю
             document.querySelectorAll('.megamenu__submenu').forEach(menu => {
                 menu.classList.remove('megamenu__submenu_open');
             });
-
             // Открываем текущее подменю
             const subMenu = this.parentNode.querySelector('.megamenu__submenu');
             if (subMenu) {
