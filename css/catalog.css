@@ -404,6 +404,14 @@
         bottom: 24px;
         gap: 10px;
     }
+    .card__slider .card-slider__prev,
+    .card__slider .card-slider__next {
+        display: none;
+    }
+    .card__slider:hover .card-slider__prev,
+    .card__slider:hover .card-slider__next {
+        display: block;
+    }
     .card-slider__prev {
         background: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 22L8 12L16 2" stroke="%233F3F46"/></svg>') no-repeat center center;
     }
