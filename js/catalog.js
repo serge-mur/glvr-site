@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* offcanvas filter */
     const filter = document.querySelector('.filter');
-    const filterToggle = document.querySelector('.control__filter');
+    const filterToggle = document.querySelector('.control__filter-toggle');
     const filterClose = document.querySelector('.filter__close');
     const filterOverlay = document.querySelector('.filter__overlay');
     const filterWrapper = document.querySelector('.filter__wrapper');
@@ -32,23 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     checkbox.checked = false;
                 });
             } else {
-                e.target.classList.toggle('filter-section__header_open');
-                e.target.closest('.filter-section').querySelector('.filter-section__content').classList.toggle('filter-section__content_open');                
+                e.currentTarget.classList.toggle('filter-section__header_open');
+                e.currentTarget.closest('.filter-section').querySelector('.filter-section__content').classList.toggle('filter-section__content_open');                
             };
         }); 
     });
 
-    // sorting
-    const sortingToggle = document.querySelector('.sorting__button');
-    const sortingContent = document.querySelector('.sorting__content');
-    // const overlay = document.querySelector('.overlay');
-    document.querySelector('.sorting__button').addEventListener('click', function() {
-        document.body.classList.toggle("remove-scrolling");
-        sortingToggle.classList.toggle('sorting__button_open');
-        // overlay.classList.toggle('overlay_open');
-        sortingContent.classList.toggle('sorting__content_open');
-    });    
-
+    // card slider
     document.querySelectorAll('.card-slider').forEach(el => {
         new Swiper(el, {
             slidesPerView: 'auto',
@@ -70,6 +60,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });        
     });
 
-
+    // hide header on scroll down
+    const header = document.querySelector('.header');
+    const filtersControl = document.querySelector('.control');
+    const headerHeight = header.clientHeight;
+    let scrollPos = 0;
+    window.addEventListener('scroll', () => {
+        if ((document.body.getBoundingClientRect()).top > scrollPos) {
+            header.style.top = '0'; 
+            filtersControl.style.top = `${headerHeight}px`;
+        } else {
+            header.style.top = `-${headerHeight}px`; 
+            filtersControl.style.top = '0';
+        }
+        scrollPos = (document.body.getBoundingClientRect()).top;    
+    });
 
 });
