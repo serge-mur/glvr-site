@@ -23,37 +23,58 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // main size select
+    const sizeBlock = document.querySelector('.product__size');
     const sizeItem = document.querySelectorAll('.size__item');
     const buttonAddCart = document.querySelector('.product__buy_add-cart');
     const buttonNotAvailable = document.querySelector('.product__buy_not-available');
     const buttonGotoCart = document.querySelector('.product__buy_goto-cart');
-    const sizeTitle = document.querySelector('.size__title');
-
+    const sizeError = document.querySelector('.product__error');
+    // клик по размеру
     sizeItem.forEach(sizeItem => {
         sizeItem.addEventListener('click', (e) => {
             const sizeButton = e.currentTarget;
+            const sizeInput = sizeButton.querySelector('.size__input');
+            const sizeInputId = sizeInput.getAttribute('data-id');
+            // активируем кнопку купить
             buttonAddCart.classList.remove('product__buy_disabled');
-            sizeTitle.style.color = '#111215';
+            // добавляем на кнопку id
+            buttonAddCart.setAttribute('data-id', sizeInputId);
+            sizeError.style.display = 'none';
             if(sizeButton.classList.contains('size__item_not-available')) {
+                // нет в наличии
+                buttonGotoCart.style.display = 'none';
                 buttonAddCart.style.display = 'none';
                 buttonNotAvailable.style.display = 'flex';
+            } else if(sizeButton.classList.contains('size__item_in-cart')) {
+                // товар уже в корзине
+                buttonAddCart.style.display = 'none';
+                buttonNotAvailable.style.display = 'none'; 
+                buttonGotoCart.style.display = 'flex';               
             } else {
+                // можно добавлять в корзину
+                buttonGotoCart.style.display = 'none';
                 buttonNotAvailable.style.display = 'none';
                 buttonAddCart.style.display = 'flex';
             }
         });
     });
+    // клик по кнопке
     buttonAddCart.addEventListener('click', (e) => {
         if(!buttonAddCart.classList.contains('product__buy_disabled')) {
-            // нужно будет помечать размер, который уже в корзине size__item_in-cart
+            // добавляем класс для размера
+            const buttonId = buttonAddCart.getAttribute('data-id');
+            document.querySelector(`.size__input[data-id="${buttonId}"]`).closest('.size__item').classList.add('size__item_in-cart');
             setTimeout(() => {
                 buttonAddCart.style.display = 'none';
                 buttonGotoCart.style.display = 'flex';
-            }, 500);
-            // alert('Товар добавлен в корзину');            
+
+                // Товар добавлен в корзину. Запрос в бэк
+
+            }, 500);           
         } else {
-            // sizeTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            sizeTitle.style.color = '#F73E12';
+            // Размер не выбран. Скроллим до блока с ошибкой 
+            sizeBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            sizeError.style.display = 'block';
         }
 
     });
@@ -108,11 +129,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // offcanvas slider
     const offcanvasSliderThumbs = new Swiper('.offcanvas-slider-thumbs', {
         slidesPerView: 9,
-        direction: 'vertical',
+        direction: 'horizontal',
         navigation: {
             nextEl: '.offcanvas-slider-thumbs__next',
             prevEl: '.offcanvas-slider-thumbs__prev',
         },
+        breakpoints: {
+            575: {
+                direction: 'vertical',
+            }
+        }
     });
     const offcanvasSliderMain = new Swiper('.offcanvas-slider-main', {
         slidesPerView: 1,

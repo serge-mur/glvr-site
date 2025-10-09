@@ -200,7 +200,10 @@
             <section class="product">
                 <div class="product__gallery">
 
-                    <a class="product__full-image-link" href="#full-image">Весь образ</a>
+                    <a class="product__full-image-link full-image-link" href="#full-image">
+                        <div class="full-image-link__text">Весь образ</div>                        
+                        <div class="full-image-link__icon"></div>                        
+                    </a>
 
                     <div class="product__no-photo" style="display: none;">
                         <img src="img/no_photo.png" alt="">
@@ -217,6 +220,11 @@
                             <a href="javascript:void(0)" class="swiper-slide product-slider__slide offcanvas-link" data-target="offcanvas-slider" data-slide-id="3">
                                 <img src="img/product_3.webp" alt="">
                             </a>
+                            <a href="javascript:void(0)" class="swiper-slide product-slider__slide product-slider__slide_video offcanvas-link" data-target="offcanvas-slider" data-slide-id="4">
+                                <video class="product-slider__video" autoplay loop muted>
+                                    <source src="https://video.gulliver.ru/glvr/catalog/225G34GAC4522.mp4" type="video/mp4">
+                                </video>
+                            </a>
                         </div>
                         <div class="swiper-pagination product-slider__pagination"></div>
                         <div class="swiper-button-prev product-slider__prev"></div>
@@ -232,6 +240,9 @@
                                 <img src="img/product_2.webp" alt="">
                             </div>
                             <div class="swiper-slide product-thumbs-slider__slide">
+                                <img src="img/product_3.webp" alt="">
+                            </div>
+                            <div class="swiper-slide product-thumbs-slider__slide product-thumbs-slider__slide_video">
                                 <img src="img/product_3.webp" alt="">
                             </div>
                         </div>
@@ -289,23 +300,23 @@
                         </div>
                         <div class="size__list">
                             <label class="size__item">
-                                <input type="radio" name="size" class="size__input">
+                                <input type="radio" name="size" class="size__input" data-id="11">
                                 <span class="size__value">xs</span>
                             </label>
                             <label class="size__item size__item_not-available">
-                                <input type="radio" name="size" class="size__input">
+                                <input type="radio" name="size" class="size__input" data-id="22">
                                 <span class="size__value">s</span>
                             </label>
                             <label class="size__item">
-                                <input type="radio" name="size" class="size__input">
+                                <input type="radio" name="size" class="size__input" data-id="33">
                                 <span class="size__value">m</span>
                             </label>
                             <label class="size__item">
-                                <input type="radio" name="size" class="size__input">
+                                <input type="radio" name="size" class="size__input" data-id="44">
                                 <span class="size__value">l</span>
                             </label>
                             <label class="size__item">
-                                <input type="radio" name="size" class="size__input">
+                                <input type="radio" name="size" class="size__input" data-id="55">
                                 <span class="size__value">xl</span>
                             </label>
 
@@ -320,7 +331,8 @@
                     <div class="product__buy-wrapper">
                         <button class="product__buy product__buy_add-cart product__buy_disabled">Добавить в корзину</button>
                         <button style="display: none;" class="product__buy product__buy_not-available offcanvas-link" data-target="notify-available">Сообщить о поступлении</button>
-                        <button style="display: none;" class="product__buy product__buy_goto-cart" onclick="window.location.href = '/cart/';">Перейти в корзину</button>
+                        <button style="display: none;" class="product__buy product__buy_goto-cart" onclick="window.location.href = '/cart/';">Оформить заказ</button>
+                        <div style="display: none;" class="product__error">Выберите размер</div>
                     </div>
 
                     <div class="product__available">Посмотреть <a href="javascript:void(0)" class="offcanvas-link" data-target="map">наличие в магазине</a> и <a href="javascript:void(0)" class="offcanvas-link" data-target="map">зарезервировать</a></div>
@@ -957,6 +969,15 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-slide offcanvas-slider-main__slide">
+                            <div class="zoomist-container">
+                                <div class="zoomist-wrapper">
+                                    <div class="zoomist-image">
+                                        <img src="img/product_3.webp" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-pagination offcanvas-slider-main__pagination"></div>
                     <div class="swiper-button-prev offcanvas-slider-main__prev"></div>
@@ -970,6 +991,9 @@
                         </div>
                         <div class="swiper-slide offcanvas-slider-thumbs__slide">
                             <img src="img/product_2.webp" alt="">
+                        </div>
+                        <div class="swiper-slide offcanvas-slider-thumbs__slide">
+                            <img src="img/product_3.webp" alt="">
                         </div>
                         <div class="swiper-slide offcanvas-slider-thumbs__slide">
                             <img src="img/product_3.webp" alt="">
