@@ -21,6 +21,7 @@
 
                 <nav class="header__menu header-menu">
                     <ul class="header-menu__list">
+
                         <li class="header-menu__item header-menu__item_catalog">
                             <a href="#" class="header-menu__link">
                                 <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,45 +31,102 @@
                             </a>
                             <div class="megamenu">
                                 <div class="megamenu__content">
-                                    <nav class="megamenu__main">
-                
-                                        <ul class="megamenu__menu">
-                                            <li><a href="#">Новинки <img src="img/dot_green.svg" alt=""></a>
-                                            </li>
-                                            <li><a href="#">Одежда</a>
-                                                <ul class="megamenu__submenu">
-                                                    <li><a href="#">Вся одежда</a></li>
-                                                    <li><a href="#">Верхняя одежда</a></li>
-                                                    <li><a href="#">Брюки, шорты</a></li>
-                                                    <li><a href="#">Жакеты</a></li>
-                                                    <li><a href="#">Жилеты</a></li>
-                                                    <li><a href="#">Толстовки, свитшоты</a></li>
-                                                    <li><a href="#">Джинсы</a></li>
-                                                    <li><a href="#">Деним</a></li>
-                                                    <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
-                                                    <li><a href="#">Водолазки</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Аксессуары</a>
-                                                <ul class="megamenu__submenu">
-                                                    <li><a href="#">Все аксессуары</a></li>
-                                                    <li><a href="#">Сумки</a></li>
-                                                    <li><a href="#">Упаковка</a></li>
-                                                    <li><a href="#">Украшения</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#" class="megamenu__mark">Sale</a></li>
-                                            <li><a href="#">Магазины</a></li>
-                                        </ul>
-                
-                                    </nav>
-                                    <nav class="megamenu__bottom">
-                                        <a href="#">Акции</a>
-                                        <a href="#">Блог</a>
-                                        <a href="#">Подарочный сертификат</a>
-                                        <a href="#">О бренде</a>
-                                        <a href="#">Программа лояльности</a>
-                                    </nav>
+                                    <ul class="megamenu__menu">
+                                        <li><a href="#">Скоро</a>
+                                        <li><a href="#" class="megamenu__point">Новинки</a></li>
+                                        <li class="megamenu__toggle"><a href="#">Одежда</a>
+                                            <ul class="megamenu__submenu">
+                                                <li><a href="#test">Вся одежда</a></li>
+                                                <li class="megamenu__sub-toggle"><a href="#">Верхняя одежда</a>
+                                                    <ul class="megamenu__sub-submenu">
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Водолазки</a></li>                                                        
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Брюки, шорты</a></li>
+                                                <li><a href="#">Жакеты</a></li>
+                                                <li><a href="#">Жилеты</a></li>
+                                                <li><a href="#">Толстовки, свитшоты</a></li>
+                                                <li><a href="#">Джинсы</a></li>
+                                                <li><a href="#">Деним</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Обувь</a>
+                                        <li class="megamenu__toggle"><a href="#">Аксессуары</a>
+                                            <ul class="megamenu__submenu">
+                                                <li><a href="#">Все аксессуары</a></li>
+                                                <li><a href="#">Сумки</a></li>
+                                                <li><a href="#">Упаковка</a></li>
+                                                <li><a href="#">Украшения</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" class="megamenu__mark">Распродажа</a></li>
+                                        <li><a href="#">Lookbook</a></li>
+                                        <li class="megamenu__toggle"><a href="#">Покупателям</a>
+                                            <ul class="megamenu__submenu">
+                                                <li><a href="#">Сервис</a></li>
+                                                <li><a href="#">О нас</a></li>
+                                                <li class="megamenu__sub-toggle"><a href="#">Бренды Gulliver Group</a>
+                                                    <ul class="megamenu__sub-submenu">
+                                                        <li class="megamenu__brands megamenu-brands">
+                                                            <a class="megamenu-brands__item" href="#">
+                                                                <svg width="193" height="21" class="megamenu-brands__icon">
+                                                                    <use xlink:href="img/menu_sprites.svg#gulliver_menu"></use>
+                                                                </svg>
+                                                                <div class="megamenu-brands__title">
+                                                                    <span>Бренд стильной одежды для детей и подростков</span>
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M2.66699 12.6666L12.0003 3.33333M12.0003 3.33333L4.82082 3.33325M12.0003 3.33333L12.0002 10.5126" stroke="#A1A1AA"/>
+                                                                    </svg>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="megamenu-brands__item" href="#">
+                                                                <svg width="91" height="19" class="megamenu-brands__icon">
+                                                                    <use xlink:href="img/menu_sprites.svg#glvr_menu"></use>
+                                                                </svg>
+                                                                <div class="megamenu-brands__title">
+                                                                    <span>Бренд женской одежды</span>
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M2.66699 12.6666L12.0003 3.33333M12.0003 3.33333L4.82082 3.33325M12.0003 3.33333L12.0002 10.5126" stroke="#A1A1AA"/>
+                                                                    </svg>
+                                                                </div>
+                                                            </a>
+                                                        </li>                                                        
+                                                        <li>
+                                                            <a class="megamenu-brands__item" href="#">
+                                                                <svg width="160" height="20" class="megamenu-brands__icon">
+                                                                    <use xlink:href="img/menu_sprites.svg#bb_menu"></use>
+                                                                </svg>
+                                                                <div class="megamenu-brands__title">
+                                                                    <span>Модная детская одежда</span>
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M2.66699 12.6666L12.0003 3.33333M12.0003 3.33333L4.82082 3.33325M12.0003 3.33333L12.0002 10.5126" stroke="#A1A1AA"/>
+                                                                    </svg>
+                                                                </div>
+                                                            </a>
+                                                        </li>                                                        
+                                                        <li>
+                                                            <a class="megamenu-brands__item" href="#">
+                                                                <svg width="96" height="32" class="megamenu-brands__icon">
+                                                                    <use xlink:href="img/menu_sprites.svg#toys_menu"></use>
+                                                                </svg>
+                                                                <div class="megamenu-brands__title">
+                                                                    <span>Лицензионные игрушки от 0 до 14 лет</span>
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M2.66699 12.6666L12.0003 3.33333M12.0003 3.33333L4.82082 3.33325M12.0003 3.33333L12.0002 10.5126" stroke="#A1A1AA"/>
+                                                                    </svg>
+                                                                </div>
+                                                            </a>
+                                                        </li>                                                        
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Блог</a></li>
+                                                <li><a href="#">Акции</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <a href="#" class="megamenu__photo">
                                     <div class="megamenu__photo-title">Верхняя одежда</div>
@@ -97,7 +155,16 @@
                 </button>
 
                 <a href="/" class="header__logo">
-                    <img src="img/header_logo.svg" alt="">
+                    <svg width="124" height="26" viewBox="0 0 124 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_3795_8907)">
+                            <path d="M26.0479 11.6632C26.0479 14.2771 25.7528 16.4073 25.1627 18.0595C24.261 20.5647 22.7744 22.4993 20.7032 23.8471C18.7086 25.1404 16.3422 25.7926 13.6098 25.7926C9.16128 25.7926 5.75115 24.2872 3.3739 21.282C1.57594 18.9995 0.679688 16.2769 0.679688 13.1141C0.679688 9.60896 1.73442 6.66352 3.83296 4.27779C6.22114 1.56065 9.55472 0.207458 13.8338 0.207458C16.6919 0.207458 19.1129 0.93567 21.1022 2.38663C22.5176 3.42461 23.7309 4.94625 24.7363 6.96244L18.7741 9.38611C18.2659 8.28297 17.6702 7.45691 16.998 6.90265C16.0307 6.12555 14.8721 5.73427 13.5333 5.73427C10.8008 5.73427 8.89349 7.13087 7.82237 9.92417C7.41796 10.9512 7.21576 12.0163 7.21576 13.1087C7.21576 15.3911 7.94259 17.2877 9.40171 18.8148C10.4783 19.9452 11.9211 20.5103 13.719 20.5103C15.3202 20.5103 16.5882 20.0484 17.5226 19.1246C18.1402 18.5159 18.5446 17.6192 18.7358 16.4236H13.5387V11.6523H26.0425L26.0479 11.6632ZM54.329 25.76H39.7103V0.316144H46.3447V20.2658H54.3236V25.76H54.329ZM90.8133 0.316144L79.9104 25.76H74.746L63.9965 0.316144H71.2267L77.3856 15.7824L83.5993 0.316144H90.8133ZM123.373 25.76H115.126L108.798 16.0324V25.76H102.163V0.316144H112.498C115.52 0.316144 117.755 1.21824 119.204 3.0225C120.372 4.47889 120.963 6.1907 120.963 8.15257C120.963 10.4078 120.291 12.2066 118.941 13.5489C118.077 14.4075 116.886 15.0053 115.378 15.3422L123.378 25.7545L123.373 25.76ZM113.984 8.70683C113.984 7.84819 113.668 7.12004 113.039 6.53312C112.449 5.97878 111.493 5.7016 110.18 5.7016H109.005V11.7393H110.18C111.509 11.7393 112.465 11.4621 113.039 10.9077C113.668 10.3045 113.984 9.57092 113.984 8.70683Z" fill="#3F3F46"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3795_8907">
+                                <rect width="123" height="26" fill="white" transform="translate(0.5)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
                 </a>
 
                 <button class="header__personal header-element">
@@ -128,32 +195,55 @@
 
     <main class="stores">      
         <div class="container">
-            <div class="stores__header">
-                <div class="stores__header-wrapper">
-                    <div class="breadcrumb breadcrumb_stores">
-                        <ul class="breadcrumb__list">
-                            <li class="breadcrumb__item">
-                                <a href="#" class="breadcrumb__link">Главная</a>
-                            </li>
-                            <li class="breadcrumb__item">
-                                <span class="breadcrumb__link breadcrumb__link_active">Магазины</span>
-                            </li>
-                        </ul>
-                    </div>                     
-                    <h1 class="stores__title">Магазины</h1>
+            <div class="breadcrumb">
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                        <a href="#" class="breadcrumb__link">Главная</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <span class="breadcrumb__link breadcrumb__link_active">Магазины</span>
+                    </li>
+                </ul>
+            </div>
+            <h1 class="page-title">
+                <a href="#" class="page-title__mobile">Магазины</a>
+                <span class="page-title__desktop">Магазины</span>
+            </h1>
+        </div>
+
+        <div class="container container_full-with">
+            <div class="stores__top stores-top">
+                <img class="stores-top__image" src="img/stores_header.png" alt="">
+                <div class="stores-top__collage top-collage">
+                    <div class="top-collage__item">
+                        <img class="top-collage__image" src="img/stores_header_1.jpg" alt="">
+                    </div>
+                    <div class="top-collage__item">
+                        <img class="top-collage__image" src="img/stores_header_2.png" alt="">
+                    </div>
+                    <div class="top-collage__item">
+                        <img class="top-collage__image" src="img/stores_header_3.png" alt="">
+                    </div>
+                    <div class="top-collage__item">
+                        <img class="top-collage__image" src="img/stores_header_4.png" alt="">
+                    </div>
                 </div>
             </div>
+        </div>
 
+        <div class="container">
             <div class="stores__wrapper">
                 <div class="stores__layers-toggle layers-toggle">
                     <div class="layers-toggle__item layers-toggle__item_map">На карте</div>
                     <div class="layers-toggle__item layers-toggle__item_content layers-toggle_active">Списком</div>
                 </div>
 
-                <div class="stores__map stores-map">
-                    <div class="stores-map__marker" data-marker="1" style="top:20%;left:40%;"></div>
-                    <div class="stores-map__marker" data-marker="2" style="top:40%;left:20%;"></div>
-                    <div class="stores-map__marker" data-marker="3" style="top:60%;left:30%;"></div>
+                <div id="stores-map" class="stores__map stores-map">
+
+                    <div class="stores-map__marker map-marker" data-id="1" style="top:20%;left:40%;"></div>
+                    <div class="stores-map__marker map-marker" data-id="2" style="top:40%;left:20%;"></div>
+                    <div class="stores-map__marker map-marker" data-id="3" style="top:60%;left:30%;"></div>
+                    <div class="stores-map__marker map-marker" data-id="4" style="top:70%;left:50%;"></div>
                 </div>
 
                 <div class="stores__content">
@@ -177,7 +267,7 @@
 
                     <div id="branded" data-tab-content class="stores__branded active">
                         <div class="stores__list">
-                            <div class="stores__item stores-item" data-point="1">                    
+                            <div class="stores__item stores-item" data-id="1">                    
                                 <div class="stores-item__main">
                                     <div class="stores-item__name">ТРК «Европолис Ростокино»</div>
                                     <div class="stores-item__metro-list">
@@ -221,7 +311,7 @@
                                     <button class="stores-item__build-route">Построить маршрут</button>
                                 </div>    
                             </div>
-                            <div class="stores__item stores-item" data-point="2">                    
+                            <div class="stores__item stores-item" data-id="2">                    
                                 <div class="stores-item__main">
                                     <div class="stores-item__name">ТЦ «Метрополис»</div>
                                     <div class="stores-item__metro-list">
@@ -264,7 +354,7 @@
                                     <button class="stores-item__build-route">Построить маршрут</button>
                                 </div>
                             </div>  
-                            <div class="stores__item stores-item" data-point="3">                    
+                            <div class="stores__item stores-item" data-id="3">                    
                                 <div class="stores-item__main">
                                     <div class="stores-item__name">ТЦ «Метрополис»</div>
                                     <div class="stores-item__metro-list">
@@ -312,7 +402,7 @@
 
                     <div id="multi" data-tab-content class="stores__multi">
                         <div class="stores__list">
-                            <div class="stores__item stores-item">                    
+                            <div class="stores__item stores-item" data-id="4">                    
                                 <div class="stores-item__main">
                                     <div class="stores-item__name">ТРК «Европолис Ростокино»</div>
                                     <div class="stores-item__metro-list">
@@ -488,6 +578,7 @@
     
     <nav class="mob-menu">
         <ul>
+            <li><a href="#">Скоро</a>
             <li><a href="#">Новинки <img src="img/dot_green.svg" alt=""></a>
             </li>
             <li class=""><span>Одежда</span>
@@ -504,6 +595,7 @@
                     <li><a href="#">Водолазки</a></li>
                 </ul>
             </li>
+            <li><a href="#">Обувь</a></li>
             <li><span>Аксессуары</span>
                 <ul>
                     <li><a href="#">Все аксессуары</a></li>
@@ -512,26 +604,42 @@
                     <li><a href="#">Украшения</a></li>
                 </ul>
             </li>
-            <li><a href="#" class="mob-menu__mark">Sale</a></li>
-            <li><a href="#">Магазины</a></li>
-            <li class="mob-menu__submenu">
-                <nav>
-                    <a href="#">Войти</a>
-                    <a href="#">Акции</a>
-                    <a href="#">Блог</a>
-                    <a href="#">Подарочный сертификат</a>
-                    <a href="#">О бренде</a>
-                    <a href="#">Программа лояльности</a>
-                </nav>
-            </li>
+            <li><a href="#" class="mob-menu__mark">Распродажа</a></li>
+            <li><a href="#">Коллекции</a></li>
+            <li><a href="#">Lookbook</a></li>
+            <li><span>Покупателям</span>
+                <ul>
+                    <li><a href="#">Сервис</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><span href="#">Бренды Gulliver Group</span>
+                        <ul>
+                            <li><a href="#">Gulliver</a></li>
+                            <li><a href="#">GLVR</a></li>
+                            <li><a href="#">Button Blue</a></li>
+                            <li><a href="#">Gulliver Toys</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Акции</a></li>
+                </ul>
+            </li>            
         </ul>
-
+        <div class="mob-menu__contacts menu-contacts">
+            <div class="menu-contacts__title">Клиентский сервис</div>
+            <a href="mailto:help@gulliver.ru" class="menu-contacts__email">help@gulliver.ru</a>
+            <a href="tel:+74951204515" class="menu-contacts__phone">8 (495) 120-45-15</a>
+            <div class="menu-contacts__working-time">Ежедневно с 9:00 до 21:00</div>
+            <a href="#" class="menu-contacts__tg"></a>
+        </div>       
     </nav>
 
     <div class="overlay"></div>
 
+    <div class="scroll-to-top"></div>
+
     <script src="lib/swiper/swiper-bundle.min.js"></script>
     <script src="lib/mmenu-light/mmenu-light.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f68f4b0a-4fc3-4694-a966-be6cb997e641&lang=ru_RU" type="text/javascript"></script>
     <script src="js/script.js"></script>
     <script src="js/stores.js"></script>
 </body>

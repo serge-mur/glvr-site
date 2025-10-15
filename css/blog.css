@@ -1,6 +1,8 @@
+/* #region common */
 .blog {
     padding: calc(46px + 16px) 0 30px 0;
 }
+/* #endregion common */
 
 /* #region category */
 .blog__category {
