@@ -122,6 +122,11 @@
     line-height: 120%;
     letter-spacing: -0.88px;
 }
+.goods__slider-wrapper {
+    position: relative;
+    min-width: 0;
+    margin: 0 -15px;
+}
 .goods__link-wrapper {
 }
 .goods__link {
@@ -141,13 +146,22 @@
     text-decoration: none;
 }
 .goods-slider {
-    min-width: 0;
 }
 .goods-slider__slide {
 }
+.goods__slider-wrapper .goods-slider__prev,
+.goods__slider-wrapper .goods-slider__next {
+    display: none;
+}
 .goods-slider__prev {
+    display: block;
+    left: -40px;
+    background: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 22L8 12L16 2" stroke="%233F3F46"/></svg>') no-repeat center center;
 }
 .goods-slider__next {
+    display: block;
+    right: -40px;
+    background: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 22L16 12L8 2" stroke="%233F3F46"/></svg>') no-repeat center center;
 }
 @media (min-width: 1200px) {
     .goods {
@@ -180,10 +194,154 @@
         line-height: 100%;
         text-decoration: none;
     }
-    .goods-slider {
+    .goods__slider-wrapper {
+        margin: 0;
         grid-column: span 2;
         order: 3;
-        min-width: 0;
+    }
+    .goods__slider-wrapper .goods-slider__prev,
+    .goods__slider-wrapper .goods-slider__next {
+        display: block;
     }
 }
+
+/* #region card */
+.card {
+    position: relative;
+}
+.card__badge {
+    color: var(--primary);
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    z-index: 2;
+}
+.card__badge_sale {
+    color: var(--sale);
+}
+.card__favorite {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+}
+.card__favorite_active .card__favorite-icon {
+    fill: var(--primary);
+}
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 15px;
+}
+.card__title {
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 132%;
+    text-decoration: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 32px;
+}
+.card__product-status {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 132%;
+}
+.card__size-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.card__size-item {
+    color: var(--secondary);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 132%;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.card__price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card__price-actual {
+    color: var(--sale);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 132%;
+}
+.card__price:not(:has(.card__price-old)) .card__price-actual {
+    color: var(--primary);
+}
+.card__price-old {
+    color: var(--secondary);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 132%;
+    text-decoration: line-through;
+}
+.card__split {
+}
+@media (min-width: 1200px) {
+    .card__badge {
+        top: 24px;
+        left: 24px;
+        font-size: 14px;
+    }
+    .card__badge_sale {
+        color: var(--sale);
+    }
+    .card__favorite {
+        top: 24px;
+        right: 24px;
+    }
+    .card__content {
+        padding: 10px 0;
+    }
+    .card__title {
+        font-size: 14px;
+        -webkit-line-clamp: 2;
+        min-height: 32px;
+    }
+    .card__product-status {
+        font-size: 14px;
+    }
+    .card__price-actual {
+        font-size: 14px;
+    }
+    .card__price-old {
+        font-size: 14px;
+    }
+    .card__split {
+    }
+}
+@media (min-width: 1920px) {
+    .card__title {
+        font-size: 16px;
+    }
+    .card__product-status {
+        font-size: 16px;
+    }
+    .card__price-actual {
+        font-size: 16px;
+    }
+    .card__price-old {
+        font-size: 16px;
+    }
+    .card__split {
+    }
+}
+/* #endregion card */
+
 /* #endregion goods slider */

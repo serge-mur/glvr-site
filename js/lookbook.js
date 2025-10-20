@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const goodsSlider = new Swiper('.goods-slider', {
-        slidesPerView: 1.1,
-        spaceBetween: 10,
+        slidesPerView: 1.6,
+        spaceBetween: 5,
         breakpoints: {
             576: {
-                slidesPerView: 2.1,
+                slidesPerView: 3.2,
                 spaceBetween: 20,
             },
             1200: {
-                slidesPerView: 4.1,
+                slidesPerView: 4,
             },
         },
         navigation: {
