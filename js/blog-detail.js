@@ -13,8 +13,23 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         },
         navigation: {
-        nextEl: '.goods-slider__next',
-        prevEl: '.goods-slider__prev',
+            nextEl: '.goods-slider__next',
+            prevEl: '.goods-slider__prev',
+        },
+    });
+
+    // card image action
+    document.querySelectorAll('.card-image__toggle').forEach(el => {
+        el.addEventListener('click', () => {
+            el.classList.toggle('card-image__toggle_open');
+            el.closest('.card-image').querySelector('.card-image__list').classList.toggle('card-image__list_open');
+        });        
+    });
+
+    const contentSlider = new Swiper('.content-slider', {
+        navigation: {
+            nextEl: '.content-slider__next',
+            prevEl: '.content-slider__prev',
         },
     });
 
@@ -31,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         },
         navigation: {
-        nextEl: '.blog-slider__next',
-        prevEl: '.blog-slider__prev',
+            nextEl: '.blog-slider__next',
+            prevEl: '.blog-slider__prev',
         },
     });
 
